@@ -4,6 +4,7 @@
   "description": "gestion-scolaire",
   "main": "server.js",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mariadb": "^2.5.4",
     "mysql2": "^2.2.5",
