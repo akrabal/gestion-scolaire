@@ -1,11 +1,21 @@
 //importations
 const express = require('express')
-
-
+const session = require('express-session')
 const port = 3000
 let app = express() 
 app.set('view engine','ejs') 
+
+//middlware
+
+app.use(session({
+  secret: 'cool on mange bien ',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}))
 app.use('/assets',express.static('public'))
+
+app.use(require('./middleware/flash'))
 
 
 //route
@@ -13,7 +23,8 @@ app.use('/assets',express.static('public'))
 //acceuille
 app.route('/')
 .get( (req, res, next) =>
-{ 
+{  
+   
    res.render('acceille');
 })  
 .post(function (req, res, next) {
@@ -23,10 +34,14 @@ app.route('/')
 //connexion
 app.route('/connexion')
 .get( (req, res, next) =>
-{ 
+{   
    res.render('connexion');
 }) 
+
 .post(function (req, res, next) {
+
+  
+  
 }) 
 //affichage
 
