@@ -1,0 +1,24 @@
+//user
+npx sequelize-cli model:generate --name utilisateur --attributes firstName:string,lastName:string,email:string
+//eleves
+npx sequelize-cli model:generate --name Eleves --attributes NomEleve:string,prenomEleve:string,emailEleve:string,datenaissEleve:string,sexEleve:string,lieunaissEleve:string,telEleve:string 
+//parents 
+npx sequelize-cli model:generate --name Parents --attributes NomParent:string,prenomParent:string,emailParent:string,sexParent:string 
+//cours
+npx sequelize-cli model:generate --name cours --attributes 
+//matiers
+npx sequelize-cli model:generate --name matiers --attributes matieredesc:string,nomMatiere:string
+//notes
+npx sequelize-cli model:generate --name notes --attributes valenote:string,coefnote:string,dateajout:string
+//fraiscolaire
+npx sequelize-cli model:generate --name fraiscolaire --attributes fraisolde:string,datesolde:string
+//typefrais
+npx sequelize-cli model:generate --name typefrais --attributes descfrais:string,montantFrais:string
+//anneeScolaire
+npx sequelize-cli model:generate --name anneeScolaire --attributes anninf:string,annsup:string
+//classes
+npx sequelize-cli model:generate --name classes --attributes niveauclasse:string
+//administration
+npx sequelize-cli model:generate --name administration --attributes 
+//etablisements
+npx sequelize-cli model:generate --name etablisements --attributes NomEtab:string,adresseEtab:string,teleEtab:string
