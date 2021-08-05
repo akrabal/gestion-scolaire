@@ -35,12 +35,10 @@ app.route('/')
 app.route('/connexion')
 .get( (req, res, next) =>
 {   
-   res.render('connexion');
+   res.render('securiter/connexion');
 }) 
 
 .post(function (req, res, next) {
-
-  
   
 }) 
 //affichage
