@@ -29,17 +29,22 @@ app.use('/connexion',routconnexion);
 
 
 
+.post(function (req, res, next) {
 
+  
+  
+}) 
 //affichage
 
-app.route('/tab')
+//administration
+app.route('/directeur')
 .get( (req, res, next) =>
 { 
-   res.render('tab');
+   res.render('/personelle/directeur');
 }) 
 .post(function (req, res, next) {
+   res.render('personnelle/directeur/directeuracc.ejs');
 }) 
-
 
 app.listen(port)  
 
