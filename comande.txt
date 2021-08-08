@@ -1,24 +1,44 @@
-//user
-npx sequelize-cli model:generate --name utilisateur --attributes firstName:string,lastName:string,email:string
+//compte utilisateur 
+
+npx sequelize-cli model:generate --name CompteUtilisateur --attributes NomUtilisateur:string,passwordUtilisateur:string,email:string
+
+//Personne
+npx sequelize-cli model:generate --name Personne --attributes cool:string
 //eleves
-npx sequelize-cli model:generate --name Eleves --attributes NomEleve:string,prenomEleve:string,emailEleve:string,datenaissEleve:string,sexEleve:string,lieunaissEleve:string,telEleve:string 
+npx sequelize-cli model:generate --name Eleves --attributes NomEleve:string,prenomEleve:string,emailEleve:string,datenaissEleve:string,sexEleve:string,lieunaissEleve:string,telEleve:string
+
 //parents 
-npx sequelize-cli model:generate --name Parents --attributes NomParent:string,prenomParent:string,emailParent:string,sexParent:string 
+npx sequelize-cli model:generate --name Parents --attributes NomParent:string,prenomParent:string,emailParent:string,datenaissParent:string,sexParent:string,telParent:string
+
+//personellAdministratif
+npx sequelize-cli model:generate --name personeladmin --attributes NomPersonel:string,prenomPersonel:string,emailPersonel:string,datenaissPersonel:string,sexPersonel:string,lieunaissPersonel:string,telPersonel:string
+
 //cours
-npx sequelize-cli model:generate --name cours --attributes 
+npx sequelize-cli model:generate --name cours --attributes cool:string
+
+//professeurs
+npx sequelize-cli model:generate --name professeurs --attributes NomProf:string,prenomProf:string,emailProf:string,datenaissProf:string,sexProf:string,lieunaissProf:string,telProf:string
+
 //matiers
-npx sequelize-cli model:generate --name matiers --attributes matieredesc:string,nomMatiere:string
+npx sequelize-cli model:generate --name matiers --attributes DescMatiere:string,NomMatiere:string
+
 //notes
 npx sequelize-cli model:generate --name notes --attributes valenote:string,coefnote:string,dateajout:string
+
 //fraiscolaire
 npx sequelize-cli model:generate --name fraiscolaire --attributes fraisolde:string,datesolde:string
+
 //typefrais
 npx sequelize-cli model:generate --name typefrais --attributes descfrais:string,montantFrais:string
+
 //anneeScolaire
 npx sequelize-cli model:generate --name anneeScolaire --attributes anninf:string,annsup:string
+
 //classes
 npx sequelize-cli model:generate --name classes --attributes niveauclasse:string
+
 //administration
-npx sequelize-cli model:generate --name administration --attributes 
+npx sequelize-cli model:generate --name administration --attributes cool:string
+
 //etablisements
 npx sequelize-cli model:generate --name etablisements --attributes NomEtab:string,adresseEtab:string,teleEtab:string
