@@ -11,6 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.hasOne(models.CompteUtilisateur,{
+        foreignKey:{
+          name:'ParentID',
+          allowNull:true
+        }
+      })
+      models.CompteUtilisateur.belongsTo(models.Parents,{
+        foreignKey:{
+          name:'ParentID',
+          allowNull:true
+        }
+      })
     }
   };
   Parents.init({
