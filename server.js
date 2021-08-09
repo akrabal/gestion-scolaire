@@ -1,6 +1,8 @@
 //importations
 const express = require('express')
 const session = require('express-session')
+const routconnexion = require('./Routes/connexion')
+const routacceille = require('./Routes/acceille')
 const port = 3000
 let app = express() 
 app.set('view engine','ejs') 
@@ -17,30 +19,17 @@ app.use('/assets',express.static('public'))
 
 app.use(require('./middleware/flash'))
 
+//acceuille
+app.use('/',routacceille)
+//connexion
+app.use('/connexion',routconnexion);  
+
 
 //route
 
-//acceuille
-app.route('/')
-.get( (req, res, next) =>
-{  
-   
-   res.render('acceille');
-})  
-.post(function (req, res, next) {
-    
-}) 
 
-//connexion
-app.route('/connexion')
-.get( (req, res, next) =>
-{   
-   res.render('securiter/connexion');
-}) 
 
-.post(function (req, res, next) {
-  
-}) 
+
 //affichage
 
 app.route('/tab')
