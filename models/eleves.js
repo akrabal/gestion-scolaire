@@ -37,6 +37,9 @@ module.exports = (sequelize, DataTypes) => {
         allowNull:false
       }
     })
+     //relation eleves cours (notes)
+     models.Eleves.belongsToMany(models.cours,{through: models.notes})
+     models.cours.belongsToMany(models.Eleves,{through: models.notes})
     }
   };
   Eleves.init({

@@ -44,5 +44,5 @@ npx sequelize-cli model:generate --name administration --attributes cool:string
 npx sequelize-cli model:generate --name etablisements --attributes NomEtab:string,adresseEtab:string,teleEtab:string
 
 //roles 
-npx sequelize-cli model:generate --name roles --attributes NomEtab:string,adresseEtab:string,teleEtab:string
+npx sequelize-cli model:generate --name roles --attributes typeRole:string,descRoles:string
  
