@@ -24,6 +24,19 @@ module.exports = (sequelize, DataTypes) => {
         allowNull:false
       }
     })
+      //relation annee_scolaires frais_scolaire
+      models.anneeScolaire.hasMany(models.fraiscolaire,{
+        foreignKey :{
+          name:'annescolaireID',
+          allowNull:false
+        }
+      })
+      models.fraiscolaire.belongsTo(models.anneeScolaire,{
+        foreignKey :{
+          name:'annescolaireID',
+          allowNull:false
+        }
+      })
     }
   };
   anneeScolaire.init({
