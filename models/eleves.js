@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      //association eleves compteutilisateur
       this.hasOne(models.CompteUtilisateur,{
         foreignKey:{
           name:'ElevesID',
@@ -23,7 +24,19 @@ module.exports = (sequelize, DataTypes) => {
           allowNull:true
         }
       })
-    
+    //relation eleves frais_scolaire
+     models.Eleves.hasMany(models.fraiscolaire,{
+      foreignKey:{
+        name:'EleveID',
+        allowNull:false
+      }
+    })
+    models.fraiscolaire.belongsTo(models.Eleves,{
+      foreignKey:{
+        name:'EleveID',
+        allowNull:false
+      }
+    })
     }
   };
   Eleves.init({
