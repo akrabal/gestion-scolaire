@@ -18,7 +18,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon serverjs"
+    "dev": "nodemon serverjs",
+    "sync":"node execute.js",
+    "drop":"node drop.js",
+    "syncAlter":"node alter.js"
   },
   "repository": {
     "type": "git",
