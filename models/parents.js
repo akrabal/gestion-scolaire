@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const eleves = require('./eleves');
 module.exports = (sequelize, DataTypes) => {
   class Parents extends Model {
     /**
@@ -11,19 +12,37 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasOne(models.CompteUtilisateur,{
+
+      //association parent compte utilisateur
+      models.Parents.hasOne(models.CompteUtilisateur,{
         foreignKey:{
           name:'ParentID',
           allowNull:true
         }
       })
+
       models.CompteUtilisateur.belongsTo(models.Parents,{
         foreignKey:{
           name:'ParentID',
           allowNull:true
         }
       })
+     
+       //association parents eleves 
+       models.Parents.hasMany(models.Eleves,{
+        foreignKey:{
+          name:'ParentID',
+          allowNull:false
+        }
+      }) 
+      models.Eleves.belongsTo(models.Parents,{
+        foreignKey:{
+          name:'ParentID',
+          allowNull:false
+        }
+      })       
     }
+    
   };
   Parents.init({
     NomParent: DataTypes.STRING,
