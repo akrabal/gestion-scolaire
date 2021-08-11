@@ -12,9 +12,9 @@
     <header class="bar-haut">
         <a href="#" class="icon">icon</a> 
         <nav class="nav-bar">
-            <a href="/">acceille</a>
-            <a href="/connexion" class="active" >connexion</a>
-            <a href="/directeur">directeur</a><a href="#">bien</a>
+            <% if (headers) {%> 
+                <%- headers %> 
+            <% } %> 
         </nav> 
     </header>
      <% if(locals.flash) {%> 

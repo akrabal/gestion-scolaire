@@ -9,7 +9,8 @@ let app = express()
 app.set('view engine','ejs') 
 
 //middlware
-
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 app.use(session({
   secret: 'cool on mange bien ',
   resave: false,
@@ -18,6 +19,7 @@ app.use(session({
 }))
 app.use('/assets',express.static('public'))
 app.use(require('./middleware/flash'))
+app.use(require('./middleware/asset'))
 
 //route
 
