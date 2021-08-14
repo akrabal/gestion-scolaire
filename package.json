@@ -4,24 +4,27 @@
   "description": "gestion-scolaire",
   "main": "server.js",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
+    "express-validator": "^6.12.1",
     "mariadb": "^2.5.4",
     "mysql2": "^2.2.5",
-    "nodemon": "^2.0.12",
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
+    "faker": "^5.5.3",
+    "nodemon": "^2.0.12",
     "sequelize-cli": "^6.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon serverjs",
-    "sync":"node execute.js",
-    "drop":"node drop.js",
-    "syncAlter":"node alter.js"
+    "sync": "node execute.js",
+    "drop": "node drop.js",
+    "syncAlter": "node alter.js"
   },
   "repository": {
     "type": "git",

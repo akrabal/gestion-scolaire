@@ -19,7 +19,9 @@
     </header>
      <% if(locals.flash) {%> 
         <div class="<%=flash.type%> ">
-             <%= flash.content %> 
+             <%flash.content.forEach(function(error) {%>
+                <%=error.msg %> <br>
+            <%})%> 
         </div>
      <% } %>    
 

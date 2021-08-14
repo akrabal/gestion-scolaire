@@ -90,6 +90,12 @@ body{
     font-size: 15px;
 }
 
+.main .form input[type="radio"]{
+    width: 25%;
+    display: inline;
+    margin: 5% 0;
+}
+
 .main .form input[type="submit"] {
     display: block;
     border-radius: 5px;
@@ -113,6 +119,12 @@ body{
     box-shadow: 1px 1px 2px #a97a7a , -0.5px -0.5px 3px #a97a7a ;
     font-weight: bold;
 }
+
+.secre
+{
+    display: none;
+}
+
 .table-cont{
     position: absolute;
     margin-top: 10%;
@@ -159,36 +171,89 @@ td,tr,th{
     border-bottom:  1.86px solid rgba(29, 29, 27, 1); ;
 }
 .error{
- 
+  position: absolute;
   text-align: center;
   border: 1px solid #DB838b;
   color: #C21827;  
   background-color: #DB838B;
   border-radius: 5px;
-  font-weight: bold;
-  width: 80%;
+  width: 20%;
   font-size: large;
-  margin: 1% 10%;
+  margin: 2% 41%;
 
 }
+.big-title{
+   background-color:rgba(29, 29, 27, 0.05);
+}
 .sucess{
-    text-align: center;
+  position: absolute;
+  text-align: center;
   border: 1px solid #BAD083;
   color: #85AD23;  
   background-color: #BAD083;
   border-radius: 5px;
-  font-weight: bold;
-  width: 80%;
+  width: 20%;
   font-size: large;
-  margin: 1% 10%;
+  margin: 2% 41%;
 }
 .sidebar {
     margin-left:0;
-    width: 250px;
+    width: 20%;
     background-color:rgba(29, 29, 27, 0.05);
-    position: fixed;
+    position:absolute;
     height: 100%;
     border-right: 1px solid rgba(29, 29, 27, 0.2);
     box-shadow: 3px 3px 3px rgba(29, 29, 27, 0.2), -0.5px -0.5px 3px rgba(29, 29, 27, 0.2)    ;
   
+}
+.sidebar .btnmenu{
+  text-decoration: none;
+  font-size: 17px;
+  color: rgba(29, 29, 27, 1);
+  display: block;
+  border: none;
+  background: rgba(29, 29, 27, 0.0);
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  margin: 0 0 0 0;
+}
+.sidebar ul{
+    padding-left:  40%;
+    list-style: none;
+}
+.side-title{
+    font-size: 20px;
+    padding-left: 15%;
+}
+.active{
+    background-color:black;
+    color: white;
+}
+.dropdown-btn:hover{
+    background-color:rgba(29, 29, 27, 0.2) ;
+}
+.dropdown-btn{
+  padding: 20px 8px 20px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgba(29, 29, 27, 1);
+  display: block;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top:0.4px solid rgba(29, 29, 27, 0.2)  ; 
+  background: rgba(29, 29, 27, 0.1);
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  margin: 0 0 0 0;
+  box-shadow: 5px 5px 3px rgba(29, 29, 27, 0.2) ;
+}
+.dropdown-container{
+    display: none;
+    background-color: rgba(29, 29, 27, 0.1);
+    padding-left:  25%;
 }

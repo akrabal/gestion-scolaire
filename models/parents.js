@@ -32,13 +32,13 @@ module.exports = (sequelize, DataTypes) => {
        models.Parents.hasMany(models.Eleves,{
         foreignKey:{
           name:'ParentID',
-          allowNull:false
+          allowNull:true
         }
       }) 
       models.Eleves.belongsTo(models.Parents,{
         foreignKey:{
           name:'ParentID',
-          allowNull:false
+          allowNull:true
         }
       })       
     }

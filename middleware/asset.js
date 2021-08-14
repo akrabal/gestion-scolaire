@@ -9,7 +9,11 @@ module.exports= function(req,res,next){
             }
             let link = namelink
          if (namelink=='acceille') {
-            link ="";
+             link ="";
+             if (chemin.replace('/','')=='') {
+               asset="class=\"active\"";
+             }
+           
          }   
           return '<a href="/'+link+'"'+asset+'>'+namelink+'</a>';       
     }

@@ -1,11 +1,11 @@
 //importations
 const express = require('express')
 const session = require('express-session')
-const routconnexion = require('./Routes/connexion')
-const routacceille = require('./Routes/acceille')
-const routadministration= require('./Routes/administration')
+const routconnexion = require('./Routes/routeconnexion')
+const routacceille = require('./Routes/routeacceille')
+const routdirecteur= require('./Routes/routedirecteur')
 const port = 3000
-let app = express() 
+let app = express()  
 app.set('view engine','ejs') 
 
 //middlware
@@ -29,10 +29,10 @@ app.use('/',routacceille)
 app.use('/connexion',routconnexion);  
 
 //administration
-app.use('/directeur',routadministration)
+app.use('/directeur',routdirecteur)
 
 
-app.listen(port)  
+app.listen(port)
 
 
 

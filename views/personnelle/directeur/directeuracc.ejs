@@ -1,0 +1,91 @@
+<%- include ('../.././include/header')%> 
+
+<div class="sidebar"> 
+    <h2 class="big-title">Gestion</h2>
+
+   <button class="dropdown-btn">  Personnel Administratif</button>  
+   <div class="dropdown-container">
+       <button class="ajoutsecre btnmenu">ajouter un  secretaire</button>
+        <button class="btnmenu">cool</button>
+        <button class="btnmenu">cool</button>
+       
+   </div>
+    
+   <button class="dropdown-btn">  Etudiant</button>  
+   <div class="dropdown-container"> 
+        <button class="btnmenu">cool</button>
+        <button class="btnmenu">cool</button>
+        <button class="btnmenu">cool</button>
+    </div>
+     <button class="dropdown-btn">  Personnel Administratif</button>  
+     <div class="dropdown-container">
+        <button class="btnmenu">cool</button>
+        <button class="btnmenu">cool</button>
+        <button class="btnmenu">cool</button>
+    </div>
+     
+    <button class="dropdown-btn">  Personnel Administratif</button>  
+    <div class="dropdown-container">
+        <button class="btnmenu">cool</button>
+        <button class="btnmenu">cool</button>
+        <button class="btnmenu">cool</button>
+     </div>
+
+</div>
+
+<div class="main">
+    <form method="POST" action="/directeur/AjoutSecretaire"  class="form secre">
+            <input type="text" name="Nom" id="" placeholder="NOM">
+            <input type="text" name="prenom" id=""placeholder="PRENOM">
+            <input type="email" name="email" id=""placeholder="email">
+            <input type="text" name="naissance" id="" placeholder="lieu de naissance">
+            <input type="number" name="numTel" id="" placeholder="numero de telephone">
+            <div class="sexe">
+                <label for="">Masculin</label>
+                <input type="radio" name="sexe" value="M" id="" >
+                <label for="">Feminin</label>
+                <input type="radio" name="sexe" value="F" id="" >
+            </div>
+            <input type="submit" value="envoyer">
+    </form>
+</div>
+     
+    <script>
+        (function(){
+          let dropdown = document.getElementsByClassName("dropdown-btn");
+          let i=0;
+
+           if (dropdown) {
+             for (i = 0; i < dropdown.length; i++) {
+                 dropdown[i].addEventListener("click", function() {
+                   this.classList.toggle("active");
+                   let dropdownContent = this.nextElementSibling;
+                   if (dropdownContent.style.display === "block") {
+                     dropdownContent.style.display = "none";
+                   } else {
+                     dropdownContent.style.display = "block";
+                   }
+                 });
+               }      
+           }
+           let abuton=document.getElementsByClassName("ajoutsecre")
+             abuton[0].addEventListener("click",function(){
+                this.classList.toggle("active");
+                 let secre =document.getElementsByClassName("secre")
+                 console.log(secre)
+                 console.log(abuton)
+                 if (secre[0].style.display === "block") {
+                    secre[0].style.display = "none";
+                  } else {
+                    secre[0].style.display = "block";
+                  }
+                  console.log(secre)
+             })
+        }) ();
+
+        
+           
+         
+       </script>
+
+<%- include ('../.././include/footer')%> 
