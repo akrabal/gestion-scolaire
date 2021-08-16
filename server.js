@@ -20,6 +20,8 @@ app.use(session({
 app.use('/assets',express.static('public'))
 app.use(require('./middleware/flash'))
 app.use(require('./middleware/asset'))
+app.use(require('./middleware/RoleVerification'))
+
 
 //route
 

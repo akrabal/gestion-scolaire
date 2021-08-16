@@ -1,6 +1,6 @@
 const { validationResult } = require('express-validator');
 const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,cours , elves, etablisements ,fraisscolaire  , matiers, notes ,parents,personeladmin,professeurs,Roles,typeFrais }=require('../models');
-
+const bcrypt = require('bcrypt')
 /*acceille*/
 exports.acceuilleGet=async  (req, res, next) =>
 {   chemin='/acceille'
@@ -84,5 +84,48 @@ exports.connexionGet= async (req, res, next) =>
    res.render('securiter/connexion');
 }
 exports.connexionPost= async (req, res, next) => { 
-   res.redirect('/directeur')
+    const compt = await CompteUtilisateur.findOne({
+       where:{
+         email: req.body.email
+       }
+    })
+    console.log(compt);
+    if(compt!== null)
+    { 
+       function faillconection(msg)
+       {
+         error={}
+         arraymsg=[]
+         error.msg=msg
+         arraymsg.push(error)
+         req.flash('error',arraymsg)
+         res.redirect('/connexion') 
+
+       }
+      if (bcrypt.compareSync(req.body.password,compt.passwordUtilisateur) )
+      {
+         
+        sucess={}
+        let arraymsg=[]
+        sucess.msg='conection reussi'
+        arraymsg.push(sucess) 
+        req.flash('sucess',arraymsg)
+         if (req.verifcompte(compt)) {
+             req.session.user=compt;
+             req.findActionForRole(compt)
+         }else{
+             faillconection('votre compte a un probleme veillez contacter l\' administrateur')
+         }
+      }else{
+         faillconection('email ou mots de passe incorrect')
+      }
+
+    }else{
+         faillconection('email ou mots de passe incorrect')
+
+    }
+  
+
+
+   
 }
