@@ -1,9 +1,16 @@
 //importations
 const express = require('express')
 const session = require('express-session')
-const routconnexion = require('./Routes/routeconnexion')
-const routacceille = require('./Routes/routeacceille')
-const routdirecteur= require('./Routes/routedirecteur')
+const routeacceille = require('./Routes/routeacceille')
+const routeconnexion = require('./Routes/routeconnexion')
+const routeconome = require('./Routes/routeconome')
+const routeDirecteur= require('./Routes/routedirecteur')
+const routeEleves=require('./Routes/routeEleves')
+const routeSecretaire = require('./Routes/routeSecretaire')
+const routeParent = require('./Routes/routeParent')
+const routeProf = require('./Routes/routeprof')
+const routelogout= require('./Routes/routelogout')
+
 const port = 3000
 let app = express()  
 app.set('view engine','ejs') 
@@ -21,19 +28,40 @@ app.use('/assets',express.static('public'))
 app.use(require('./middleware/flash'))
 app.use(require('./middleware/asset'))
 app.use(require('./middleware/RoleVerification'))
+app.use(require('./middleware/security'))
 
 
 //route
 
 //acceuille
-app.use('/',routacceille)
+app.use('/',routeacceille)
 //connexion
-app.use('/connexion',routconnexion);  
+app.use('/connexion',routeconnexion);  
 
-//administration
-app.use('/directeur',routdirecteur)
+//econome 
+app.use('/econome',routeconome)
+
+//directeur
+app.use('/directeur',routeDirecteur)
+
+//Eleves
+app.use('/eleves',routeEleves)
+
+//Parent
+app.use('/parent',routeParent)
+
+//prof
+app.use('/professeurs',routeProf)
+
+//secretaire
+app.use('/secretaire',routeSecretaire)
+
+//logout
+app.use('/deconexion',routelogout)
 
 
+
+ 
 app.listen(port)
 
 

@@ -1,6 +1,6 @@
 
 const express = require("express")
-const controlleurs=require('./controller')
+const controlleurs=require('./controller/Cdirecteur')
 const{ body, check }=require('express-validator')
 let router = express.Router()
 

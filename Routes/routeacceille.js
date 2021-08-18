@@ -1,6 +1,6 @@
 const express = require("express")
 let router = express.Router()
-const controlleurs=require('./controller')
+const controlleurs=require('./controller/Cacceille')
 
 router.get('/',controlleurs.acceuilleGet) 
 

@@ -1,6 +1,6 @@
 module.exports= (req,res,next)=>
 {
-    req.verifcompte = function (compt)
+    req.verifcompte =async function (compt)
     {
         let nbrdeliaison= 0 ;
 
@@ -30,19 +30,19 @@ module.exports= (req,res,next)=>
                res.redirect('/directeur')
             } 
             if (role.typeRole=='secretaire') {
-               res.redirect('/connexion')
+               res.redirect('/secretaire')
             } 
             if (role.typeRole=='econome') {
-               res.redirect('/connexion')
+               res.redirect('/econome')
             } 
             if (role.typeRole=='professeurs') {
-               res.redirect('/connexion')
+               res.redirect('/professeurs')
             } 
             if (role.typeRole=='eleves') {
-               res.redirect('/connexion')
+               res.redirect('/eleves')
             } 
             if (role.typeRole=='Parent') {
-               res.redirect('/connexion')
+               res.redirect('/parent')
             } 
             
     }

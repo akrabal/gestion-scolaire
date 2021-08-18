@@ -1,0 +1,76 @@
+<%- include ('.././include/header')%> 
+<div class="sidebar"> 
+    <h2 class="big-title">Gestion</h2>
+
+   <button class="dropdown-btn">  Personnel Administratif</button>  
+   <div class="dropdown-container">
+       <button class="btnmenu" onclick='afficheligne(0)' >ajouter un  secretaire</button>
+        <button class="btnmenu" onclick='afficheligne(1)'  >cool</button>
+        <button class="btnmenu" onclick='afficheligne(2)'>cool</button>
+       
+   </div>
+    
+   <button class="dropdown-btn">  Etudiant</button>  
+   <div class="dropdown-container"> 
+        <button class="btnmenu" onclick='afficheligne(3)'>cool</button>
+        <button class="btnmenu" onclick='afficheligne(4)'>cool</button>
+        <button class="btnmenu" onclick='afficheligne(5)'>cool</button>
+    </div>
+     <button class="dropdown-btn">  Personnel Administratif</button>  
+     <div class="dropdown-container">
+        <button class="btnmenu" onclick='afficheligne(6)'>cool</button>
+        <button class="btnmenu" onclick='afficheligne(7)'>cool</button>
+        <button class="btnmenu" onclick='afficheligne(8)'>cool</button>
+    </div>
+     
+    <button class="dropdown-btn">  Personnel Administratif</button>  
+    <div class="dropdown-container">
+        <button class="btnmenu" onclick='afficheligne(9)'>cool</button>
+        <button class="btnmenu" onclick='afficheligne(10)'>cool</button>
+        <button class="btnmenu" onclick='afficheligne(11)'>cool</button>
+     </div>
+
+</div>
+<%- include ('.././include/footer')%> 
+
+<script>  
+    
+    let dropdown = document.getElementsByClassName("dropdown-btn");
+    let i=0;
+
+     if (dropdown) {
+       for (i = 0; i < dropdown.length; i++) {
+           dropdown[i].addEventListener("click", function() {
+             this.classList.toggle("active");
+             let dropdownContent = this.nextElementSibling;
+             if (dropdownContent.style.display === "block") {
+               dropdownContent.style.display = "none";
+             } else {
+               dropdownContent.style.display = "block";
+             }
+           });
+         }      
+     }
+
+     function afficheligne(i)
+     {
+       let secre = document.getElementsByClassName("secre")
+      
+       if(secre[i])
+       { 
+         let a =0 
+        for(a;a<secre.length;a++)
+        {
+          if(secre[a].style.display == "block")
+           secre[a].style.display = "none";
+        }
+         secre[i].style.display = "block";
+        
+       }else{
+         console.log('ça arrive')
+       }
+      
+
+     };
+
+ </script>

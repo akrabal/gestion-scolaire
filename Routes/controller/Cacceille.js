@@ -1,0 +1,15 @@
+const { validationResult } = require('express-validator');
+const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,cours , elves, etablisements ,fraisscolaire  , matiers, notes ,parents,personeladmin,professeurs,roles,typeFrais }=require('../../models');
+
+
+exports.acceuilleGet=async  (req, res, next) =>
+{  
+   
+   chemin='/acceille'
+   res.locals.headers=res.locals.headers+req.activ("acceille",chemin) 
+   res.locals.headers=res.locals.headers+req.activ("connexion",chemin)
+   res.render('acceille');
+}
+exports.acceuillePost=async (req, res, next) => {
+   chemin='/acceille'
+}
