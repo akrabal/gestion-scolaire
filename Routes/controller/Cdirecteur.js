@@ -90,3 +90,38 @@ const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,co
        }         
        
     }
+
+    exports.ajoutEconomePost= async (req,res,next)=> {
+   
+      const error= validationResult (req)
+     if (!error.isEmpty()) {
+        errors=error.array()
+        req.flash('error',errors) 
+        res.redirect('/directeur')
+     }else{
+       try {
+          
+           const role1 = await roles.findOne({
+             where:{
+                 typeRole:'econome'
+             }
+         })
+           const econome = await personeladmin.create({NomPersonel: req.body.Nom, prenomPersonel: req.body.prenom ,emailPersonel: req.body.email , sexPersonel:req.body.sexe, lieunaissPersonel: req.body.naissance , telPersonel: req.body.numTel, adminsID: req.session.user.administration.id})
+           const compt = await CompteUtilisateur.create({NomUtilisateur: req.body.email, passwordUtilisateur: 'cool', email:req.body.email,personelID: econome.id,roleID: role1.id})
+          
+        } catch (error) {
+           console.log(error);
+        }   
+      
+           arraymsg=[]
+           sucess={}
+          sucess.msg='econome enregistrer'
+          arraymsg.push(sucess)
+ 
+          req.flash('sucess',arraymsg)
+          res.redirect('/directeur')
+    
+     }         
+     
+  }
+
