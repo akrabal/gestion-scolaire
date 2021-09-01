@@ -128,10 +128,10 @@ async function bcryp()
     */
   
  //3
- /*
+ 
  parents()
  prof()
-  */
+  
 
  
 

@@ -11,6 +11,20 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+        //relation notes matiere
+        models.matiers.hasMany(models.notes,{
+          foreignKey :{
+            name:'MatierID',
+            allowNull:false
+          }
+        })  
+        models.notes.belongsTo(models.matiers,{
+          foreignKey :{
+            name:'MatierID',
+            allowNull:false
+          }
+        }) 
+  
     }
   };
   notes.init({

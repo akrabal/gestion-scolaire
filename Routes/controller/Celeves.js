@@ -7,7 +7,7 @@ exports.ElevesGet= async(req,res)=>{
  
        if (req.session.user.role.typeRole=='eleves'){
           chemin=req.baseUrl
-          res.locals.headers=res.locals.headers+req.activ("Eleves",chemin) 
+          res.locabbwwls.headers=res.locals.headers+req.activ("Eleves",chemin) 
           res.locals.headers=res.locals.headers+req.activ("deconexion",chemin) 
           return  res.render('eleves/acceuille');
 

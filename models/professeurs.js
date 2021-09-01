@@ -23,20 +23,21 @@ module.exports = (sequelize, DataTypes) => {
           allowNull:true
         }
       })
-      //relation  professeurs cours
-      models.professeurs.hasMany(models.cours,{
-        foreignKey:{
-          name:'ProfID',
+      //relation  professeurs matiere
+      models.matiers.hasMany(models.professeurs,{
+        foreignKey :{
+          name:'MatierID',
+          allowNull:false
+        }
+      })  
+      models.professeurs.belongsTo(models.cours,{
+        foreignKey :{
+          name:'MatierID',
           allowNull:false
         }
       }) 
 
-      models.cours.belongsTo(models.professeurs,{
-        foreignKey:{
-          name:'ProfID',
-          allowNull:false
-        }
-      })  
+      
     
     }
   };

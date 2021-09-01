@@ -4,9 +4,12 @@ const bcrypt = require('bcrypt')
 
 exports.connexionGet= async (req, res, next) =>
 {   
-   req.firewall() 
+  
    
       chemin='/connexion';
+      res.locals.headers=res.locals.headers+req.activ("acceille",chemin) 
+      res.locals.headers=res.locals.headers+req.activ("connexion",chemin) 
+      res.locals.headers=res.locals.headers+req.activ("inscription",chemin)
       res.render('securiter/connexion');
 }      
    

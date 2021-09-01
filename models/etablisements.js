@@ -11,15 +11,44 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      models.etablisements.hasOne(models.administration,{
+
+         //association etablisement compteutilisateur
+      this.hasOne(models.CompteUtilisateur,{
         foreignKey:{
+          name:'etablisementID',
+          allowNull:true
+        }
+      })
+      models.CompteUtilisateur.belongsTo(models.etablisements,{
+        foreignKey:{
+          name:'etablisementID',
+          allowNull:true
+        }
+      })
+
+       //association etablisement personel
+       models.etablisements.hasMany(models.personeladmin,{
+        foreignKey :{
+          name:'etablisementID',
+          allowNull:false
+        }
+      })
+      models.personeladmin.belongsTo(models.etablisements,{
+        foreignKey :{
           name:'etablisementID',
           allowNull:false
         }
       })
 
-      models.administration.belongsTo(models.etablisements,{
-        foreignKey:{
+      //association etablisement classes 
+      models.etablisements.hasMany(models.classes,{
+        foreignKey :{
+          name:'etablisementID',
+          allowNull:false
+        }
+      })
+      models.classes.belongsTo(models.etablisements,{
+        foreignKey :{
           name:'etablisementID',
           allowNull:false
         }

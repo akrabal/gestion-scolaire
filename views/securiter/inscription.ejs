@@ -2,20 +2,113 @@
 
    
 <%- include ('../include/header')%> 
+<h1 class="h1ins">inscription en tant que :</h1>
+               <div class="btpersonelins">
+                   <button onclick="afficheligne(0)" class="btEtudiants btIns"> Etudiants</button>
+                   <button onclick="afficheligne(1)" class="btprof btIns">Professeurs</button>
+                   <button onclick="afficheligne(2)" class="btpar btIns"> Parents</button>
+                   <button onclick="afficheligne(3)" class="btEtab btIns"> Etablisements</button>
+               </div>
 <div class="main">
-    <form action="" class="form">
-        
-            <input type="text" name="" id="" placeholder="">
-            <input type="text" name="" id="" placeholder="">
-            <input type="text" name="" id="" placeholder="">
-            <input type="text" name="" id="" placeholder="">
-            <input type="text" name="" id="" placeholder="">
-            <input type="text" name="" id="" placeholder="">
-            <input type="submit" value="envoyer"placeholder="cool">
-    
+    <form method="POST" action="/secretaire/AjoutEtudiant"  class="form ins">
+        <caption> Etudiant</caption>
+        <input type="text" name="Nom" id="" placeholder="NOM">
+        <input type="text" name="prenom" id=""placeholder="PRENOM">
+        <input type="email" name="email" id=""placeholder="email">
+        <input type="text" name="naissance" id="" placeholder="lieu de naissance">
+        <input type="number" name="numTel" id="" placeholder="numero de telephone">
+        <div class="sexe">
+            <label for="">Masculin</label>
+            <input type="radio" name="sexe" value="M" id="" >
+            <label for="">Feminin</label>
+            <input type="radio" name="sexe" value="F" id="" >
+        </div>
+        <input type="submit" value="envoyer">
+    </form>
+
+    <form method="POST" action="/secretaire/AjoutProfesseur"  class="form ins">
+        <caption>professeur</caption>
+        <input type="text" name="Nom" id="" placeholder="NOM">
+              <input type="text" name="prenom" id=""placeholder="PRENOM">
+              <input type="email" name="email" id=""placeholder="email">
+              <input type="text" name="naissance" id="" placeholder="lieu de naissance">
+              <input type="number" name="numTel" id="" placeholder="numero de telephone">
+              <div class="sexe">
+                  <label for="">Masculin</label>
+                  <input type="radio" name="sexe" value="M" id="" >
+                  <label for="">Feminin</label>
+                  <input type="radio" name="sexe" value="F" id="" >
+              </div>
+              <input type="submit" value="envoyer">
+      </form>
+
+      <form method="POST" action=""  class="form ins">
+        <caption>parent</caption>
+              <input type="text" name="Nom" id="" placeholder="NOM">
+              <input type="text" name="prenom" id=""placeholder="PRENOM">
+              <input type="email" name="email" id=""placeholder="email">
+              <input type="text" name="naissance" id="" placeholder="lieu de naissance">
+              <input type="number" name="numTel" id="" placeholder="numero de telephone">
+              <div class="sexe">
+                  <label for="">Masculin</label>
+                  <input type="radio" name="sexe" value="M" id="" >
+                  <label for="">Feminin</label>
+                  <input type="radio" name="sexe" value="F" id="" >
+              </div>
+              <input type="submit" value="envoyer">
+      </form>
+
+    <form action="" method="POST" class="form ins">
+            <input type="text" name="nomEatb" id="" placeholder="Etablisement">
+            <input type="text" name="nomdirecteur" id="" placeholder="Nom du directeur ">
+            <input type="text" name="Prenomdirecteur" id="" placeholder="Prenom du directeur ">
+            <input type="text" name="email" id="" placeholder="email du directeur">
+            <input type="text" name="lieunaissance" id="" placeholder="date de naissance du directeur ">
+            <input type="number" name="telephone" placeholder="numero de telephone" id="">
+            <div class="sexe">
+                <label for="">Masculin</label>
+                <input type="radio" name="sexe" value="M" id="" >
+                <label for="">Feminin</label>
+                <input type="radio" name="sexe" value="F" id="" >
+            </div>
+            <input type="submit" value="envoyer">
     </form>
 
 </div>
+
+<script>
+    function afficheligne(i)
+    {
+      let Ins = document.getElementsByClassName("ins")
+      let bt = document.getElementsByClassName("btIns")
+      let h1 = document.getElementsByClassName("h1ins")
+     
+     
+      if(Ins[i])
+      { 
+        let a=0  
+        h1[0].style.display = "none";
+        for(a;a<bt.length;a++)
+        {
+            
+            bt[a].style.display = "none";
+        }
+        
+        a=0
+       for(a;a<Ins.length;a++)
+       {
+          if(Ins[a].style.display == "block")
+          Ins[a].style.display = "none";
+       }
+       Ins[i].style.display = "block";
+       
+      }else{
+        console.log('ça arrive')
+      }
+     
+
+    };    
+</script>
 <%-include('../include/footer') %> 
     
 

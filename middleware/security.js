@@ -22,8 +22,6 @@ module.exports = async (req,res,next) =>
         
          case '/connexion':
             chemin=req.baseUrl
-            res.locals.headers=res.locals.headers+req.activ("acceille",chemin) 
-            res.locals.headers=res.locals.headers+req.activ("connexion",chemin) 
                break;   
          case '/directeur':
             

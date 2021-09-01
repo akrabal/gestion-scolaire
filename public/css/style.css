@@ -203,7 +203,7 @@ td,tr,th{
     position:absolute;
     height: 100%;
     border-right: 1px solid rgba(29, 29, 27, 0.2);
-    box-shadow: 3px 3px 3px rgba(29, 29, 27, 0.2), -0.5px -0.5px 3px rgba(29, 29, 27, 0.2)    ;
+    box-shadow: 3px 3px 3px rgba(29, 29, 27, 0.2), -0.5px -0.5px 3px rgba(29, 29, 27, 0.2);
   
 }
 .sidebar .btnmenu{
@@ -259,4 +259,61 @@ td,tr,th{
     display: none;
     background-color: rgba(29, 29, 27, 0.1);
     padding-left:  25%;
+}
+
+.btpersonelins{
+    margin-left: 32%;
+}
+.btEtudiants{
+   margin: 0 4%;
+   height: 40px;
+   width: 90px;
+   text-align: center;
+   background-color: rgba(29, 29, 27, 0.1);
+   border: none;
+   border-radius: 5px;
+   box-shadow: 5px 5px 3px rgba(29, 29, 27, 0.2) ;
+}
+
+.btprof{
+    margin: 0 4%;
+    height: 40px;
+    width: 90px;
+    text-align: center;
+    background-color: rgba(29, 29, 27, 0.2);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 3px rgba(29, 29, 27, 0.3) ;
+}
+
+.btpar{
+    margin: 0 4%;
+   height: 40px;
+   width: 90px;
+   text-align: center;
+   background-color: rgba(29, 29, 27, 0.3);
+   border: none;
+   border-radius: 5px;
+   box-shadow: 5px 5px 3px rgba(29, 29, 27, 0.4) ;
+}
+
+.btEtab{
+    margin: 0 4%;
+   height: 40px;
+   width: 90px;
+   text-align: center;
+   background-color: rgba(29, 29, 27, 0.4);
+   border: none;
+   border-radius: 5px;
+   box-shadow: 5px 5px 3px rgba(29, 29, 27, 0.5) ;
+
+}
+
+.btIns {
+    display: inline-block;
+}
+
+
+.ins{
+    display: none;
 }
