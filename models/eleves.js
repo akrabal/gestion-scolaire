@@ -17,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
           name:'ElevesID',
           allowNull:true
         }
-      })
-      models.CompteUtilisateur.belongsTo(models.Eleves,{
+      },{as: 'Eleve'})
+       models.CompteUtilisateur.belongsTo(models.Eleves,{as: 'Eleve'},{
         foreignKey:{
           name:'ElevesID',
           allowNull:true

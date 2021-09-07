@@ -27,13 +27,13 @@ module.exports = (sequelize, DataTypes) => {
       models.matiers.hasMany(models.professeurs,{
         foreignKey :{
           name:'MatierID',
-          allowNull:false
+          allowNull:true
         }
       })  
       models.professeurs.belongsTo(models.cours,{
         foreignKey :{
           name:'MatierID',
-          allowNull:false
+          allowNull:true
         }
       }) 
 

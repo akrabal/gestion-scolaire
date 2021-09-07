@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,cours , elves, etablisements ,fraisscolaire  , matiers, notes ,parents,personeladmin,professeurs,roles,typeFrais }=require('../../models');
+const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,cours , Eleves, etablisements ,fraisscolaire  , matiers, notes ,Parents,personeladmin,professeurs,roles,typeFrais }=require('../../models');
 
 exports.ElevesGet= async(req,res)=>{
     if (req.verifsession()) 
@@ -7,7 +7,7 @@ exports.ElevesGet= async(req,res)=>{
  
        if (req.session.user.role.typeRole=='eleves'){
           chemin=req.baseUrl
-          res.locabbwwls.headers=res.locals.headers+req.activ("Eleves",chemin) 
+          res.locals.headers=res.locals.headers+req.activ("Eleves",chemin) 
           res.locals.headers=res.locals.headers+req.activ("deconexion",chemin) 
           return  res.render('eleves/acceuille');
 
@@ -48,3 +48,5 @@ exports.ElevesGet= async(req,res)=>{
        return res.redirect('/connexion')    
     }  
  }
+
+ 

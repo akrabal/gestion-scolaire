@@ -1,19 +1,31 @@
-const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,cours , Eleves, etablisements ,fraisscolaire  , matiers, notes ,Parents,personeladmin,professeurs,roles,typeFrais }=require('./models');
+const { sequelize, classes, administration , anneeScolaire ,CompteUtilisateur,cours , Eleves, etablisements ,fraisscolaire  , matiers, notes ,Parents,personeladmin,professeurs,roles,typeFrais }=require('./models');
 const facker = require('faker')
 const bcrypt = require('bcrypt');
-
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+facker . locale  =  "fr"
 async function etablisement()
-{
+{    
+    const role2 = await roles.findOne({
+    where:{
+        typeRole:'directeur'
+         }
+            })
     const etab = await etablisements.create({NomEtab: facker.company.companyName(),adresseEtab: facker.address.cityName() , teleEtab:facker.phone.phoneNumberFormat(3) })
-    return etab ;
+    const directeur = await personeladmin.create({NomPersonel: facker.name.firstName(), prenomPersonel:facker.name.lastName() ,emailPersonel: facker.internet.email(),sexPersonel: 'M'  , lieunaissPersonel: facker.address.cityName() , telPersonel: facker.phone.phoneNumberFormat(3), etablisementID: etab.id})
+     directeur.setEtablisement(etab)
+     const compt = await CompteUtilisateur.create({NomUtilisateur: directeur.NomPersonel , passwordUtilisateur: 'cool', email: directeur.emailPersonel,personelID: directeur.id,roleID: role2.id})
+    
 }
 
 
 async function admin()
 {   
     const etab = await etablisement()
-    const admin = await administration.create({cool:facker.company.companyName(),etablisementID: etab.id})
-    return admin ;
+    return etab ;
 }
 async function role()
 {
@@ -29,7 +41,7 @@ async function role()
 
 async function secretaire()
 {   
-      const admin = await administration.findOne({
+      const admin = await etablisements.findOne({
           where:{
               id:1
           }
@@ -39,17 +51,16 @@ async function secretaire()
             typeRole:'secretaire'
         }
     })
-     for (let i = 0; i < 5; i++) {
-        
-        const secretaire = await personeladmin.create({NomPersonel: facker.name.firstName(), prenomPersonel:facker.name.lastName() ,emailPersonel: facker.internet.email(),sexPersonel: 'M' , lieunaissPersonel: facker.address.cityName() , telPersonel: facker.phone.phoneNumberFormat(3), adminsID: admin.id})
-        secretaire.setAdministration(admin)
-        const compt = await CompteUtilisateur.create({NomUtilisateur: secretaire.NomPersonel , passwordUtilisateur: 'cool', email: secretaire.emailPersonel ,personelID: secretaire.id,roleID: role1.id})
-     }
     
+        
+        const secretaire = await personeladmin.create({NomPersonel: facker.name.firstName(), prenomPersonel:facker.name.lastName() ,emailPersonel: facker.internet.email(),sexPersonel: 'M' , lieunaissPersonel: facker.address.cityName() , telPersonel: facker.phone.phoneNumberFormat(3), etablisementID: admin.id})
+        secretaire.setEtablisement(admin)
+        const compt = await CompteUtilisateur.create({NomUtilisateur: secretaire.NomPersonel , passwordUtilisateur: 'cool', email: secretaire.emailPersonel ,personelID: secretaire.id,roleID: role1.id})
+         
 }
 async function directeur()
 {       
-         const admin=await administration.findOne({
+         const admin=await etablisements.findOne({
              where:{
                 id:1
              }
@@ -61,9 +72,9 @@ async function directeur()
         })
          
          
-         const directeur = await personeladmin.create({NomPersonel: facker.name.firstName(), prenomPersonel:facker.name.lastName() ,emailPersonel: facker.internet.email() , lieunaissPersonel: facker.address.cityName() , telPersonel: facker.phone.phoneNumberFormat(3), adminsID: admin.id})
-         directeur.setAdministration(admin)
-         const compt = await CompteUtilisateur.create({NomUtilisateur: directeur.NomPersonel , passwordUtilisateur: 'cool', email: directeur.emailPersonel,sexPersonel: 'M' ,personelID: directeur.id,roleID: role2.id})
+         const directeur = await personeladmin.create({NomPersonel: facker.name.firstName(), prenomPersonel:facker.name.lastName() ,emailPersonel: facker.internet.email(),sexPersonel: 'M' , lieunaissPersonel: facker.address.cityName() , telPersonel: facker.phone.phoneNumberFormat(3), etablisementID: admin.id})
+         directeur.setEtablisement(admin)
+         const compt = await CompteUtilisateur.create({NomUtilisateur: directeur.NomPersonel , passwordUtilisateur: 'cool', email: directeur.emailPersonel ,personelID: directeur.id,roleID: role2.id})
 
 }
 
@@ -80,11 +91,11 @@ async function parents()
 }
 
 async function eleves()
-{   const  par = await Parents.findOne({
+{ /*   const  par = await Parents.findOne({
     where:{
         id:1
     }
-})  
+})  */
     
 
     const role2 = await roles.findOne({
@@ -92,12 +103,12 @@ async function eleves()
         typeRole:'eleves'
     }
 })
-    console.log(par.id);
-    console.log(par);
+   
 
+   const elv = await Eleves.create({NomEleve:facker.name.firstName(),prenomEleve:facker.name.lastName(),emailEleve:facker.internet.email(),sexEleve:'M',lieunaissEleve:facker.address.cityName(),telEleve:facker.phone.phoneNumberFormat(3)})
 
-   const elv = await Eleves.create({NomEleve:facker.name.firstName(),prenomEleve:facker.name.lastName(),emailEleve:facker.internet.email(),sexEleve:'M',lieunaissEleve:facker.address.cityName(),telEleve:facker.phone.phoneNumberFormat(3),ParentID: par.id })
-   const compt = await CompteUtilisateur.create({NomUtilisateur: elv.NomEleve , passwordUtilisateur: 'cool', email: elv.emailEleve ,personelID: elv.id,roleID: role2.id})
+   const compt = await CompteUtilisateur.create({NomUtilisateur: elv.NomEleve , passwordUtilisateur: 'cool', email: elv.emailEleve ,ElevesID: elv.id,roleID: role2.id})
+   console.log(compt.getEleve); 
 }
 
 async function prof()
@@ -111,32 +122,98 @@ async function prof()
     const compt = await CompteUtilisateur.create({NomUtilisateur: pro.NomProf , passwordUtilisateur: 'cool', email: pro.emailProf ,ProfID: pro.id,roleID: role2.id})
 
 }
+async function anne()
+{    
+
+    let  annepremier=facker.date.past('2020')  
+    let bien = annepremier.getFullYear()
+    const ann =  await anneeScolaire.create({anninf: annepremier ,annsup:annepremier.setFullYear(bien+1)})
+}
+
+async function matier()
+{
+    const matie = await matiers.create({NomMatiere:facker.name.jobTitle(),DescMatiere:facker.lorem.sentence()})
+}
+
+async function classe()
+{
+  const etab = await etablisements.findByPk(1) 
+  const anne= await anneeScolaire.findByPk(1)
+  await classes.create({niveauclasse:'l1', annescolaireID: anne.id ,etablisementID:etab.id})
+  await classes.create({niveauclasse:'l2', annescolaireID: anne.id,etablisementID:etab.id})
+  await classes.create({niveauclasse:'l3', annescolaireID: anne.id,etablisementID:etab.id})
+}
+/*********************************************************************************************************************************************************************************************************************************************************************************** */
+async  function avantnote()
+{
+    const matier = await matiers.findAll()
+   
+    for (let i = 0; i < matier.length; i++) {
+        const cool = matier[i];
+        console.log(cool.NomMatiere);
+        
+    }         
+}
+
+
+
+async function ajoutclass()
+{
+    const classe = await classes.findByPk(1)
+    const elv = await Eleves.findAll()
+
+    for (let i = 0; i < elv.length; i++) {
+        await elv[i].setClasses(classe);  
+    }
+}
+
 async function bcryp()
 {
   return  await bcrypt.hash('cool',10)
 }
 //1
-/*
-  admin()
-  role()
- */
+
+
+//role()
+  
 
   //2
- /*
-    directeur()
-    secretaire()
-    */
-  
- //3
- 
- parents()
- prof()
-  
 
+//etablisement()
+
+  
  
 
-  
+  //3
+ 
+   
+ // secretaire()
 
+   
+   
+ //eleves()
+    
+  
+ //4
+ 
+ //parents()
+ // prof()
+
+ //5
+
+
+// matier()
+
+//anne()
+// classe()
+ 
+
+
+//6
+//avantnote()
+
+  
+ajoutclass()
 
 
 

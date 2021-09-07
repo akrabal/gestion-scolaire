@@ -1,0 +1,21 @@
+<%- include ('../include/header')%> 
+<table class="" >
+    <thead>
+        <tr>
+          <!--<th colspan="2">The table header</th> --> 
+           <th>ETUDIANTS</th> 
+           <th>NOTE</th> 
+        </tr>
+    </thead>
+    <tbody>
+    <% if(locals.eleves) {%> 
+      <% for( i=0;i<eleves.length;i++){ %> 
+        <tr>
+            <td><%= eleves[i].NomEleve%> <%= eleves[i].prenomEleve %>  </td>
+            <td><input type="number" name="note<%=i%>" id=""></td>
+        </tr>
+        <% } %> 
+     <% } %>    
+    </tbody>
+</table>
+ 

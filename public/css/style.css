@@ -5,23 +5,30 @@ body{
     font-size: 16px;
      margin: 0;
     font-family: Roboto, Arial, sans-serif;
-    background-color:rgba(29, 29, 27, 0.2);
+    background:  #ffffff;
+   /*  background-color:rgba(29, 29, 27, 0.2);*/
      /*background-color: rgba(233, 220, 217, 0.4);*/
 
 }
 
+i{
+   font-size: 30px;
+    color : #0060af;
+}
+
 .bar-haut{
   
+   
     width: 100%;
     margin: 0;
-    
     /*padding: 20px 0px 20px 150px;*/
-     padding: 1.5% 0 1.5% 11.25%;
+     padding: 1.5% 0 1.5% 2.25%;
      opacity: 0.9;
-     border-bottom:0.4px solid rgba(29, 29, 27, 0.2); 
-     box-shadow: 0.5px 0.5px 3px rgba(29, 29, 27, 0.2) ;
-   /* background-color:rgba(29, 29, 27, 0.1);*/
-   /*background-color: rgba(233, 220, 217, 0.4);*/
+     /*border-bottom:0.4px solid rgba(29, 29, 27, 0.2);*/ 
+     box-shadow: 0px 50px 100px rgba(29, 29, 27, 0.2) ;
+   /*  background-color:rgba(29, 29, 27, 0.35);*/
+  /* background-color: rgba(233, 220, 217, 0.4);*/
+  
   
    
 }
@@ -29,36 +36,154 @@ body{
 
 .icon{
     float: left;
-    padding: 0px 1.5% 0px;
+    padding: 1.5% 0% 0px;
+    color: #0060af;
     text-decoration: none;
-}
+    font-size: 17px;
+    background:-webkit-linear-gradient(right,#ffffff -20%, #0060af 70%);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    }
+
 .nav-bar{
     text-align: center; 
 
     }
+.acool{
+  display: inline-block;
+  padding: 0% 7% 0 7%; 
+}    
 
 .nav-bar a{
-    padding: 0 7.2% 0; 
+    padding: 1% 7.2% 1%; 
     text-decoration: none;
     color: #191919;
-    opacity: 0.4;
-    
-  
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .nav-bar a:hover, .nav-bar a.active{
    
    background-color:rgba(29, 29, 27, 0.4); 
-   color:hsl(0, 83%, 25%);
+   color:#0060af;
    border-radius: 15px;
-   font-weight: bold;
+ 
    
 }
+.sidebar {
+    margin-left:0;
+    width: 20%;
+    /*background-color:rgba(29, 29, 27, 0.3);*/
+    position:absolute;
+    height: 100%;
+    border-right: 1px solid rgba(29, 29, 27, 0.2);
+    box-shadow: 50px 0px 100px rgba(29, 29, 27, 0.2) ;
+    background-color: #0060af;
+    
+    /*box-shadow: 3px 0 3px rgba(29, 29, 27, 0.2), -0.5px -0.5px 3px rgba(29, 29, 27, 0.2);*/
+    
+    
+
+
+}
+.sidebar .btnmenu{
+  text-decoration: none;
+  font-size: 17px;
+  color: rgba(29, 29, 27, 1);
+  display: block;
+  border: none;
+  height: 50px;
+  background: rgba(29, 29, 27, 0.0);
+  width:100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  margin: 0 0 0 0;
+  border-bottom:0.4px solid rgba(29, 29, 27, 0.2);
+
+}
+.btnmenu:hover ,.btnmenu.active{
+    color: white;
+}
+.sidebar ul{
+    padding-left:  40%;
+    list-style: none;
+}
+.side-title{
+    font-size: 20px;
+    padding-left: 15%;
+}
+.dropdown-btn.active{
+    background-color:#007dc2 ;
+    color: white;
+}
+.dropdown-btn:hover{
+    background-color:#007dc2 ;
+}
+.dropdown-btn{
+  padding: 20px 8px 20px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgba(29, 29, 27, 1);
+  display: block;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top:0.4px solid rgba(29, 29, 27, 0.2)  ; 
+  background-color: rgba(29, 29, 27, 0.1);
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  margin: 0 0 0 0;
+ /* box-shadow: 5px 5px 3px rgba(29, 29, 27, 0.2) ;*/
+}
+.dropdown-container{
+    display: none;
+    background-color: rgba(29, 29, 27, 0.1);
+    /*padding-left:  25%;*/
+}
+
 
 .contain{
     position: absolute;
     margin-top: 15%;
 }
+
+.matiers{
+    position: absolute;
+    width: 100%;
+    left: 10%;
+    top:20%;
+    display: inline-block;
+}
+.matiera{
+    margin: 0 10%;
+   /* text-align: center;*/
+    border-radius: 5px;
+   
+}
+.matierselect {
+
+
+    /*width: 20%;*/
+   
+    height: 40px;
+    width: 100px;
+    text-align: center;
+    background-color: rgba(29, 29, 27, 0.2);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 3px rgba(29, 29, 27, 0.3) ;
+
+}
+.matierselect input{
+    border-radius: 5px;
+    background-color:#5fa7e2 ;
+}
+
+
 
 .main{
     position: absolute;
@@ -66,10 +191,15 @@ body{
     margin-left: 35%;
     width: 400px;
     border-radius: 15px;
-    background:rgba(29, 29, 27, 0.1);
-    box-shadow: 5px 5px 3px rgba(29, 29, 27, 0.2), -0.5px -0.5px 3px rgba(29, 29, 27, 0.2)    ;
-   /* background-color: rgba(233, 220, 217, 0.4);*/
+    background:linear-gradient( to right, #1066ac,#007dc2) ;
+    box-shadow: 30px 30px 20px rgba(29, 29, 27, 0.2), -0.5px -0.5px 3px rgba(29, 29, 27, 0.2)    ;
+    background-color:#439bca;
+    
    
+}
+
+.item{
+    display: inline;
 }
 
 .form{
@@ -102,7 +232,7 @@ body{
     margin: 15% 0;
     width: 100%;
     height: 8%;
-    background-color:#a97a7a ;
+    background-color:#0060af ;
 }
 
 .main .form input:focus,select:focus,textarea:focus{
@@ -137,8 +267,8 @@ body{
 }
 
 table{
-    width: 90%;
-    margin: 5%  ;
+    width: 100%;
+    margin-top: 10.5%;
     /*border: 1px solid #333;*/
 }
 
@@ -150,26 +280,37 @@ td,tr,th{
 */
 .tab-affich{
     border-collapse: collapse;
+    position: absolute;
+    left: 20%;
+    
 }
 
 .tab-affich thead tr{
-    background-color:rgba(29, 29, 27, 0.1) ;
-    text-align: left;
-    font-weight: bold;
+    /*background-color:rgba(29, 29, 27, 0.1) ;*/
+    text-align: justify;
+    font-weight: 700;
+    height: 60px;
+    border-top:  1px solid rgb(55, 78, 211,0.15); 
+    
+
 }
 
 .tab-affich th,.tab-affich td{
-    padding: 1.5%;
+   padding: .5rem 3.5rem;
 }
 .tab-affich tbody tr{
-    border-bottom:0.4px solid rgba(29, 29, 27, 0.2);   
+   /* border-bottom:0.4px solid rgba(29, 29, 27, 0.2);   */
+   font-size: medium;
+    
 }
 .tab-affich tbody tr:nth-of-type(even){
-    background-color: rgba(83, 83, 76, 0.2);
+    background-color: rgba(55, 78, 211, 0.15);
 }
 .tab-affich tbody tr:last-child{
-    border-bottom:  1.86px solid rgba(29, 29, 27, 1); ;
+    border-bottom:  1px solid rgb(55, 78, 211,0.1); 
+    
 }
+/*cyptek web copy*/
 .error{
   position: absolute;
   text-align: center;
@@ -179,7 +320,8 @@ td,tr,th{
   border-radius: 5px;
   width: 20%;
   font-size: large;
-  margin: 2% 41%;
+  bottom: 60%;
+  right: 3%;
 
 }
 .big-title{
@@ -194,71 +336,8 @@ td,tr,th{
   border-radius: 5px;
   width: 20%;
   font-size: large;
-  margin: 2% 41%;
-}
-.sidebar {
-    margin-left:0;
-    width: 20%;
-    background-color:rgba(29, 29, 27, 0.05);
-    position:absolute;
-    height: 100%;
-    border-right: 1px solid rgba(29, 29, 27, 0.2);
-    box-shadow: 3px 3px 3px rgba(29, 29, 27, 0.2), -0.5px -0.5px 3px rgba(29, 29, 27, 0.2);
-  
-}
-.sidebar .btnmenu{
-  text-decoration: none;
-  font-size: 17px;
-  color: rgba(29, 29, 27, 1);
-  display: block;
-  border: none;
-  background: rgba(29, 29, 27, 0.0);
-  width:100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-  margin: 0 0 0 0;
-}
-.btnmenu:hover ,.btnmenu.activebtmenu{
-    color: brown;
-}
-.sidebar ul{
-    padding-left:  40%;
-    list-style: none;
-}
-.side-title{
-    font-size: 20px;
-    padding-left: 15%;
-}
-.dropdown-btn.active{
-    background-color:rgba(29, 29, 27, 0.4) ;
-    color: white;
-}
-.dropdown-btn:hover{
-    background-color:rgba(29, 29, 27, 0.2) ;
-}
-.dropdown-btn{
-  padding: 20px 8px 20px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: rgba(29, 29, 27, 1);
-  display: block;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  border-top:0.4px solid rgba(29, 29, 27, 0.2)  ; 
-  background-color: rgba(29, 29, 27, 0.1);
-  width:100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-  margin: 0 0 0 0;
-  box-shadow: 5px 5px 3px rgba(29, 29, 27, 0.2) ;
-}
-.dropdown-container{
-    display: none;
-    background-color: rgba(29, 29, 27, 0.1);
-    padding-left:  25%;
+  bottom: 60%;
+  right: 3%;
 }
 
 .btpersonelins{

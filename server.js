@@ -11,6 +11,7 @@ const routeParent = require('./Routes/routeParent')
 const routeProf = require('./Routes/routeprof')
 const routelogout= require('./Routes/routelogout')
 const routeIns = require('./Routes/routeIns')
+const routeProfil =require('./Routes/routesprofil')
 
 const port = 3000
 let app = express()  
@@ -26,6 +27,7 @@ app.use(session({
   cookie: { secure: false }
 }))
 app.use('/assets',express.static('public'))
+app.use('/professeurs/assets',express.static('public'))
 app.use(require('./middleware/flash'))
 app.use(require('./middleware/asset'))
 app.use(require('./middleware/RoleVerification'))
@@ -58,6 +60,9 @@ app.use('/professeurs',routeProf)
 
 //secretaire
 app.use('/secretaire',routeSecretaire)
+
+//profil
+app.use('/profil',routeProfil)
 
 //logout
 app.use('/deconexion',routelogout)

@@ -40,8 +40,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   anneeScolaire.init({
-    anninf: DataTypes.STRING,
-    annsup: DataTypes.STRING
+    anninf: DataTypes.DATE,
+    annsup: DataTypes.DATE
   }, {
     sequelize,
     modelName: 'anneeScolaire',

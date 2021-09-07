@@ -25,7 +25,10 @@ module.exports= (req,res,next)=>
         
     }
     req.findActionForRole = async (compt)=>{
-        role= await compt.getRole()
+     
+      if (req.verifsession()) 
+      {
+         role= await compt.getRole()
             if (role.typeRole=='directeur') {
                res.redirect('/directeur')
             } 
@@ -44,6 +47,10 @@ module.exports= (req,res,next)=>
             if (role.typeRole=='Parent') {
                res.redirect('/parent')
             } 
+        
+      }else{
+         res.redirect('/connexion')
+      }
             
     }
     next()

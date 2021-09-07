@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,cours , elves, etablisements ,fraisscolaire  , matiers, notes ,parents,personeladmin,professeurs,roles,typeFrais }=require('../../models');
+const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,cours , Eleves, etablisements ,fraisscolaire  , matiers, notes ,Parents,personeladmin,professeurs,roles,typeFrais }=require('../../models');
 
 
 /*directeur*/
@@ -16,6 +16,7 @@ const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,co
          chemin=req.baseUrl
          res.locals.headers=res.locals.headers+req.activ("directeur",chemin) 
          res.locals.headers=res.locals.headers+req.activ("deconexion",chemin) 
+         
          return  res.render('personnelle/directeur/directeuracc');
         }else{
          error={}
@@ -72,19 +73,22 @@ const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,co
                    typeRole:'secretaire'
                }
            })
-             const secretaire = await personeladmin.create({NomPersonel: req.body.Nom, prenomPersonel: req.body.prenom ,emailPersonel: req.body.email , sexPersonel:req.body.sexe, lieunaissPersonel: req.body.naissance , telPersonel: req.body.numTel, adminsID: req.session.user.administration.id})
+             const secretaire = await personeladmin.create({NomPersonel: req.body.Nom, prenomPersonel: req.body.prenom ,emailPersonel: req.body.email , sexPersonel:req.body.sexe, lieunaissPersonel: req.body.naissance , telPersonel: req.body.numTel, etablisementID: req.session.user.administration.id})
              const compt = await CompteUtilisateur.create({NomUtilisateur: req.body.email, passwordUtilisateur: 'cool', email:req.body.email,personelID: secretaire.id,roleID: role1.id})
-            
-          } catch (error) {
-             console.log(error);
-          }   
-        
              arraymsg=[]
              sucess={}
             sucess.msg='secretaire enregistrer'
             arraymsg.push(sucess)
-   
             req.flash('sucess',arraymsg)
+            
+          } catch (error) {
+             console.log(error)
+             
+          }   
+        
+             
+   
+           
             res.redirect('/directeur')
       
        }         

@@ -6,4 +6,6 @@ router.get('/',controlleurs.profGet)
 
 router.post('/',controlleurs.profPost) 
 
+router.get('/:id',controlleurs.ajoutnoteGet)
+router.post('/:id',controlleurs.ajoutnotePost)
 module.exports= router

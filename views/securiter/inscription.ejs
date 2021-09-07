@@ -7,16 +7,17 @@
                    <button onclick="afficheligne(0)" class="btEtudiants btIns"> Etudiants</button>
                    <button onclick="afficheligne(1)" class="btprof btIns">Professeurs</button>
                    <button onclick="afficheligne(2)" class="btpar btIns"> Parents</button>
-                   <button onclick="afficheligne(3)" class="btEtab btIns"> Etablisements</button>
+                   <button onclick="afficheligne(3)" class="btEtab btIns"> directeur </button>
                </div>
 <div class="main">
-    <form method="POST" action="/secretaire/AjoutEtudiant"  class="form ins">
+    <form method="POST" action="/inscription/ajoutetuIns"  class="form ins">
         <caption> Etudiant</caption>
-        <input type="text" name="Nom" id="" placeholder="NOM">
+        <input type="text" name="nom" id="" placeholder="NOM">
         <input type="text" name="prenom" id=""placeholder="PRENOM">
         <input type="email" name="email" id=""placeholder="email">
-        <input type="text" name="naissance" id="" placeholder="lieu de naissance">
-        <input type="number" name="numTel" id="" placeholder="numero de telephone">
+        <input type="password" name="password" placeholder="mots de passe utilisateur" id="">
+        <input type="text" name="lieunaissance" id="" placeholder="lieu de naissance">
+        <input type="number" name="numtel" id="" placeholder="numero de telephone">
         <div class="sexe">
             <label for="">Masculin</label>
             <input type="radio" name="sexe" value="M" id="" >
@@ -26,13 +27,14 @@
         <input type="submit" value="envoyer">
     </form>
 
-    <form method="POST" action="/secretaire/AjoutProfesseur"  class="form ins">
+    <form method="POST" action="/inscription/ajoutprofIns"  class="form ins">
         <caption>professeur</caption>
-        <input type="text" name="Nom" id="" placeholder="NOM">
+        <input type="text" name="nom" id="" placeholder="NOM">
               <input type="text" name="prenom" id=""placeholder="PRENOM">
               <input type="email" name="email" id=""placeholder="email">
-              <input type="text" name="naissance" id="" placeholder="lieu de naissance">
-              <input type="number" name="numTel" id="" placeholder="numero de telephone">
+              <input type="password" name="password" placeholder="mots de passe utilisateur" id="">
+              <input type="text" name="lieunaissance" id="" placeholder="lieu de naissance">
+              <input type="number" name="numtel" id="" placeholder="numero de telephone">
               <div class="sexe">
                   <label for="">Masculin</label>
                   <input type="radio" name="sexe" value="M" id="" >
@@ -42,13 +44,14 @@
               <input type="submit" value="envoyer">
       </form>
 
-      <form method="POST" action=""  class="form ins">
+      <form method="POST" action="/inscription/ajoutparentIns"  class="form ins">
         <caption>parent</caption>
-              <input type="text" name="Nom" id="" placeholder="NOM">
+              <input type="text" name="nom" id="" placeholder="NOM">
               <input type="text" name="prenom" id=""placeholder="PRENOM">
               <input type="email" name="email" id=""placeholder="email">
-              <input type="text" name="naissance" id="" placeholder="lieu de naissance">
-              <input type="number" name="numTel" id="" placeholder="numero de telephone">
+              <input type="password" name="password" placeholder="mots de passe utilisateur" id="">
+              <input type="text" name="lieunaissance" id="" placeholder="lieu de naissance">
+              <input type="number" name="numtel" id="" placeholder="numero de telephone">
               <div class="sexe">
                   <label for="">Masculin</label>
                   <input type="radio" name="sexe" value="M" id="" >
@@ -58,13 +61,16 @@
               <input type="submit" value="envoyer">
       </form>
 
-    <form action="" method="POST" class="form ins">
-            <input type="text" name="nomEatb" id="" placeholder="Etablisement">
-            <input type="text" name="nomdirecteur" id="" placeholder="Nom du directeur ">
-            <input type="text" name="Prenomdirecteur" id="" placeholder="Prenom du directeur ">
+    <form action="/inscription/ajoutdirecteurIns" method="POST" class="form ins">
+            <input type="text" name="nomEatb" id="" placeholder="Nom de votre Etablisement">
+            <input type="text" name="adresseEtab"  placeholder="adresse de l'etablisement"  id="">
+            <input type="number" name="numtelEtab" placeholder="numero de telephone de l'etablisement" id="">
+            <input type="text" name="nom" id="" placeholder="Nom du directeur ">
+            <input type="text" name="prenom" id="" placeholder="Prenom du directeur ">
+            <input type="password" name="password" placeholder="mots de passe utilisateur" id="">
             <input type="text" name="email" id="" placeholder="email du directeur">
-            <input type="text" name="lieunaissance" id="" placeholder="date de naissance du directeur ">
-            <input type="number" name="telephone" placeholder="numero de telephone" id="">
+            <input type="text" name="lieunaissance" id="" placeholder="lieu de naissance du directeur ">
+            <input type="number" name="numtel" placeholder="numero de telephone du directeur" id="">
             <div class="sexe">
                 <label for="">Masculin</label>
                 <input type="radio" name="sexe" value="M" id="" >
@@ -91,7 +97,7 @@
         for(a;a<bt.length;a++)
         {
             
-            bt[a].style.display = "none";
+          bt[a].style.display = "none";
         }
         
         a=0

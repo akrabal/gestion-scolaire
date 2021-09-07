@@ -12,8 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
        //association classe cours 
-       models.classes.belongsToMany(models.Eleves,{through: models.ClassEleves})
-       models.Eleves.belongsToMany(models.classes,{through: models.ClassEleves })
+       models.classes.belongsToMany(models.Eleves,{through: models.ClassEleves,as:{
+        singular: "Eleve",
+        plural:  'Eleves'}})
+       models.Eleves.belongsToMany(models.classes,{through: models.ClassEleves,as:{
+        singular: "classe",
+        plural:  'classes'} })
     }
   };
   classes.init({

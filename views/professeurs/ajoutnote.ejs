@@ -1,6 +1,14 @@
 <%- include ('.././include/header')%> 
 
+<div class="sidebar"> 
+     <h2 class="big-title">Gestion</h2>
+        <button class="dropdown-btn">Notes</button>
+            <div class="dropdown-container">
+                <button class="btnmenu" onclick='afficheligne(0)'><%=matiers.NomMatiere %></button>
+            </div>
+</div>
 
+   
 <div>
 
   <!--
@@ -21,53 +29,28 @@
   </div>
   <% } %> 
 
-  <h1>acceuille</h1>
-
-<table class="tab-affich secre" >
-      <thead>
-          <tr>
-            <!--<th colspan="2">The table header</th> --> 
-             <th>cool</th> 
-             <th>cool</th> 
-             <th>cool</th> 
-             <th>cool</th> 
-             <th>cool</th>
-             <th>cool</th>
-             <th>cool</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-          </tr>
-          <tr>
-            <td>cool</td>
-            <td>cool</td>
-            <td>cool</td>
-            <td>cool</td>
-            <td>cool</td>
-            <td>cool</td>
-            <td>cool</td>
-        </tr>
+ <form class="tab-affich secre" action="" method="post">
+  <table class="" >
+    <thead>
         <tr>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-      </tr>
-      </tbody>
-  </table>
+          <!--<th colspan="2">The table header</th> --> 
+           <th>ETUDIANTS</th> 
+           <th>NOTE</th> 
+        </tr>
+    </thead>
+    <tbody>
+    <% if(locals.eleves) {%> 
+      <% for( i=0;i<eleves.length;i++){ %> 
+        <tr>
+            <td><%= eleves[i].NomEleve%> <%= eleves[i].prenomEleve %>  </td>
+            <td><input type="number" name="note<%=i%>" id=""></td>
+        </tr>
+        <% } %> 
+     <% } %>    
+    </tbody>
+</table>
+    <input type="submit" value="enregistrer">
+ </form>
      
     <script>  
           let dropdown = document.getElementsByClassName("dropdown-btn");

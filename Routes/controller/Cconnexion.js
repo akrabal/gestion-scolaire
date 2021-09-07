@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,cours , elves, etablisements ,fraisscolaire  , matiers, notes ,parents,personeladmin,professeurs,roles,typeFrais }=require('../../models');
+const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,cours , Eleves, etablisements ,fraisscolaire  , matiers, notes ,Parents,personeladmin,professeurs,roles,typeFrais }=require('../../models');
 const bcrypt = require('bcrypt')
 
 exports.connexionGet= async (req, res, next) =>
@@ -45,20 +45,35 @@ exports.connexionPost= async (req, res, next) => {
             req.session.user.compt=compt
             req.session.user.role= await compt.getRole()
       
-            if (compt.ElevesID !== null) {
-               req.session.user.Eleve = await compt.getEleve()
+            if (compt.ElevesID !== null)
+             {
+                 try { 
+                       req.session.user.Eleve = await compt.getEleve()
+                     } catch (error) {
+                       console.log(error);
+                       faillconection('votre compte a un probleme veillez contacter l\' administrateur')
+                     }
+             
               }
+
               if (compt.ParentID !== null) {
-               req.session.user.Parent =await compt.getParent()
+                try {
+                req.session.user.Parent =await compt.getParent()
+                } catch (error) {
+                  console.log(error);
+                
+                }
+               
               }
               if (compt.personelID !== null) {
                req.session.user.Personel =  await compt.getPersoneladmin()
-               req.session.user.administration = await req.session.user.Personel.getAdministration()
+               req.session.user.administration = await req.session.user.Personel.getEtablisement()
               }
               if (compt.ProfID !== null) {
                req.session.user.prof = await compt.getProfesseur()
               }    
              req.findActionForRole(compt)
+            
          }else{
              faillconection('votre compte a un probleme veillez contacter l\' administrateur')
          }

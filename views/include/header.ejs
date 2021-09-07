@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title> ✒intranet gestion scollaire </title>
 </head>
 <body>
 
     <header class="bar-haut">
-        <a href="#" class="icon">icon</a> 
+        <a href="#" class="icon">INTRANET DE GESTION  SCOLAIRE </a> 
         <nav class="nav-bar">
-            <% if (headers) {%> 
+            <% if (locals.headers) {%> 
                 <%- headers %> 
             <% } %> 
         </nav> 
@@ -22,6 +23,12 @@
              <%flash.content.forEach(function(error) {%>
                 <%=error.msg %> <br>
             <%})%> 
+
+            <% if(flash.type=="error") {%>
+                <i class="bi bi-exclamation-triangle"></i>
+            <% }else{ %>
+                <i class="bi bi-emoji-smile"></i>
+                <%  } %> 
         </div>
      <% } %>    
 
