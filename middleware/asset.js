@@ -31,7 +31,7 @@ module.exports= function(req,res,next){
 
          if (namelink=="deconexion") {
           fain="<div class=\"item\" >"+"<i class=\"bi bi-box-arrow-in-left\"></i>"+"</div>"
-          console.log(fain);
+          
         }
         if (namelink=="directeur") {
           fain=" <div class=\"item\" >"+"<a href=\"/profil\">"+"<i class=\"bi bi-person-circle\"></i>"+"</a>"+"</div>"
@@ -39,7 +39,7 @@ module.exports= function(req,res,next){
 
         if (namelink=="professeurs") {
           fain=" <div class=\"item\" >"+"<a href=\"/profil\">"+"<i class=\"bi bi-person-circle\"></i>"+"</a>"+"</div>"   
-          console.log(fain);
+          
         }
     
 

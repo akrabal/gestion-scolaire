@@ -6,7 +6,7 @@ const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,co
 
 exports.profilGet=async(req,res)=>{
     if (req.verifsession()) 
-    { 
+    {   res.locals.user= req.session.user
         res.render('securiter/profil')
       
     } else{
@@ -14,7 +14,7 @@ exports.profilGet=async(req,res)=>{
        arraymsg=[]
        error.msg="veillez vous connecter "
        arraymsg.push(error)
-       req.flash('error',arraymsg)
+       req.flash('danger',arraymsg)
        return res.redirect('/connexion')    
     }  
  }

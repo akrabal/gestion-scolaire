@@ -1,0 +1,400 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Search, sort, filters, flexibility to tables, list and more! - List.js</title>
+    <meta name="description" content="Perfect library for adding search, sort, filters and flexibility to tables, lists and various HTML elements. Built to be invisible and work on existing HTML.
+">
+    <meta name="author" content="Jonny Strömberg">
+    <meta name="google-site-verification" content="CxtqsFWhMxG32DK5A7Hbtg1ficvqhu9sybSeDP25JpI" />
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//platform.twitter.com">
+    <link rel="dns-prefetch" href="//www.facebook.com">
+    <link rel="shortcut icon" href="/assets/images/graphics/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Open graph -->
+    <meta property="og:title" content="List.js" />
+    <meta property="og:description" content="Perfect library for adding search, sort, filters and flexibility to tables, lists and various HTML elements. Built to be invisible and work on existing HTML.
+" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="/assets/images/graphics/listjs-logo.png" />
+
+    <!-- Twitter card -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="List.js" />
+    <meta property="twitter:site" content="@javve" />
+    <meta property="twitter:description" content="Perfect library for adding search, sort, filters and flexibility to tables, lists and various HTML elements. Built to be invisible and work on existing HTML.
+" />
+    <meta property="twitter:image:src" content="/assets/images/graphics/listjs-logo.png" />
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26278829-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <script async src="https://hosted.okayanalytics.com/tracker.js?tid=OA-OVYXYEWW"></script>
+</head>
+
+<body>
+
+  <div class="menu">
+    <div class="container">
+      <ul class="main">
+        <li style="display:none;"><a href="http://javve.com">Javve.com</a></li>
+        <li style="font-size:22px;"><a href="/"><b>List.js</b></a></li>
+        <li><iframe style="position: relative; top: 3px;" src="https://ghbtns.com/github-btn.html?user=javve&repo=list.js&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe></li>
+        <li style="float:right; margin-right:0;"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M7ZGHV75VSD2E">Support List.js <span class="heart">❤️</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="docs">
+      <div class="docs-menu">
+
+  <h4>Overview</h4>
+  <ul>
+    <li ><a href="/overview/download">Download</a></li>
+    <li ><a href="/overview">TLDR / Features</a></li>
+    <li ><a href="/overview/changelog">Changelog</a></li>
+    <li ><a href="/overview/contribute">Contribute</a></li>
+    <li><a href="https://github.com/javve/list.js" target="_blank">GitHub</a></li>
+  </ul>
+
+  <h4>Documentation</h4>
+  <ul>
+    <li ><a href="/docs">Getting started</a></li>
+    <li ><a href="/api">List API</a></li>
+    <li ><a href="/docs/item-api">Item API</a></li>
+    <li ><a href="/docs/search-sort">Searching + Sorting</a></li>
+    <li ><a href="/faq">FAQ</a></li>
+  </ul>
+
+  <h4>Examples</h4>
+  <ul>
+    
+    <li><a href="/examples/add-get-remove/">Add, get, remove</a></li>
+    
+    <li><a href="/examples/data-attributes-custom-attributes/">Data attributes + custom</a></li>
+    
+    <li><a href="/examples/existing-list-add/">Existing list and add</a></li>
+    
+    <li><a href="/examples/existing-list/">Existing list</a></li>
+    
+    <li><a href="/examples/fuzzy-search/">Fuzzy search</a></li>
+    
+    <li><a href="/examples/new-list/">New list</a></li>
+    
+    <li><a href="/examples/pagination/">Pagination</a></li>
+    
+    <li><a href="/examples/table/">Table</a></li>
+    
+  </ul>
+</div>
+
+      <div class="docs-content">
+        <div class="intro">
+  <div class="intro-logo">
+    <img src="/assets/images/graphics/listjs-logo.png" />
+  </div>
+  <div class="intro-text">
+    <h1>List.js <small>v2.3.1</small></h1>
+    <h2>
+      Tiny, invisible and simple, yet powerful and incredibly fast vanilla JavaScript
+      that adds <em>search</em>, <em>sort</em>, <em>filters</em> and <em>flexibility</em>
+      to plain HTML <em>lists</em>, <em>tables</em>, or anything.
+    </h2>
+  </div>
+</div>
+
+<div class="misc">
+
+  <div class="misc-author">
+    <img src="http://1.gravatar.com/avatar/9f8130715cb4c452f1294eafa1b36290?size=80" id="javve-pic" class="misc-author-pic" />
+    <h4>Hi! I'm Jonny and the author of List.js.</h4>
+    <p>
+      I hope you like the lib. I’ve put a lot of hours into it!
+      Feel free to follow me on Twitter and GitHub for news and donate a coffee for good karma ;)
+    </p>
+    <iframe src="https://ghbtns.com/github-btn.html?user=javve&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+    <a href="https://twitter.com/javve" class="twitter-follow-button" data-show-count="false">Follow @javve</a>
+
+    <form class="donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="V2SDE9QNU6KMA">
+      <button type="submit" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" class="donate">
+        <span onmouseover="$('#javve-pic').attr('src', '/assets/images/graphics/javve-coffee2.jpg');" onmouseout="$('#javve-pic').attr('src', '/assets/images/graphics/javve.jpg');">Donate a cup of coffee</span>
+      </button>
+      <img class="donate-pixel" alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+    </form>
+  </div>
+</div>
+
+
+<div class="annotated-examples">
+<h2>Basic examples</h2>
+<p>
+  Here is an example of a list with List.js applied. List.js can be used in
+  three different ways. It can be on existing HTML, it can create it's own
+  HTML or a combination of both methods.
+</p>
+<div class="annotated-list" id="users">
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">Sort by name</button>
+  <button class="sort" data-sort="born">Sort by born</button>
+  <div class="list">
+    <div>
+      <h3 class="name">Jonny Strömberg</h3>
+      <p class="born">1990</p>
+    </div>
+    <div>
+      <h3 class="name">Jonas Arnklint</h3>
+      <p class="born">1985</p>
+    </div>
+    <div>
+      <h3 class="name">Martina Elm</h3>
+      <p class="born">1986</p>
+    </div>
+    <div>
+      <h3 class="name">Gustaf Lindqvist</h3>
+      <p class="born">1983</p>
+    </div>
+  </div>
+</div>
+
+<h3>Apply List.js on existing HTML</h3>
+<div class="columns">
+  <div class="column">
+<pre><code id="existing-html">&lt;div id="users">
+
+&lt;!-- class="search" automagically makes an input a search field. -->
+  &lt;input class="search" placeholder="Search" />
+&lt;!-- class="sort" automagically makes an element a sort buttons. The date-sort value decides what to sort by. -->
+  &lt;button class="sort" data-sort="name">
+    Sort
+  &lt;/button>
+
+&lt;!-- Child elements of container with class="list" becomes list items -->
+  &lt;ul class="list">
+    &lt;li>
+&lt;!-- The innerHTML of children with class="name" becomes this items "name" value -->
+      &lt;h3 class="name">Jonny Stromberg&lt;/h3>
+      &lt;p class="born">1986&lt;/p>
+    &lt;/li>
+    &lt;li>
+      &lt;h3 class="name">Jonas Arnklint&lt;/h3>
+      &lt;p class="born">1985&lt;/p>
+    &lt;/li>
+    &lt;li>
+      &lt;h3 class="name">Martina Elm&lt;/h3>
+      &lt;p class="born">1986&lt;/p>
+    &lt;/li>
+    &lt;li>
+      &lt;h3 class="name">Gustaf Lindqvist&lt;/h3>
+      &lt;p class="born">1983&lt;/p>
+    &lt;/li>
+  &lt;/ul>
+
+&lt;/div></code></pre>
+  </div>
+  <div class="column">
+<pre><code id="existing-js">var options = {
+  valueNames: [ 'name', 'born' ]
+};
+
+var userList = new List('users', options);</code></pre>
+  </div>
+</div>
+
+<h3>Apply List.js on existing HTML and then add items</h3>
+<div class="columns">
+  <div class="column">
+<pre><code id="add-html">&lt;div id="users">
+
+  &lt;input class="search" placeholder="Search" />
+  &lt;button class="sort" data-sort="name">
+    Sort
+  &lt;/button>
+
+  &lt;ul class="list">
+&lt;!-- This, the first element in the list, will be used as template for new items. -->
+    &lt;li>
+      &lt;h3 class="name">Jonny Stromberg&lt;/h3>
+      &lt;p class="born">1986&lt;/p>
+    &lt;/li>
+  &lt;/ul>
+
+&lt;/div>
+</code></pre>
+  </div>
+  <div class="column">
+<pre><code id="add-js">var options = {
+  valueNames: [ 'name', 'born' ]
+};
+
+// These items will be added to the list on initialization.
+var values = [
+  {
+    name: 'Jonas Arnklint',
+    born: 1985
+  },
+  {
+    name: 'Martina Elm',
+    born: 1986
+  }
+];
+
+var userList = new List('users', options, values);
+
+// It's possible to add items after list been initiated
+userList.add({
+  name: 'Gustaf Lindqvist',
+  born: 1983
+});</code></pre>
+  </div>
+</div>
+
+
+
+<h3>Make List.js create a list from scratch</h3>
+<div class="columns">
+  <div class="column">
+<pre><code id="new-html">&lt;div id="users">
+
+  &lt;input class="search" placeholder="Search" />
+  &lt;button class="sort" data-sort="name">
+    Sort
+  &lt;/button>
+
+  &lt;ul class="list">&lt;/ul>
+
+&lt;/div></code></pre>
+  </div>
+  <div class="column">
+<pre><code id="new-js" class="javascript">var options = {
+  valueNames: [ 'name', 'born' ],
+  // Since there are no elements in the list, this will be used as template.
+  item: '&lt;li>&lt;h3 class="name">&lt;/h3>&lt;p class="born">&lt;/p>&lt;/li>'
+};
+
+var values = [
+  {
+    name: 'Jonny Strömberg',
+    born: 1986
+  },
+  {
+    name: 'Jonas Arnklint',
+    born: 1985
+  },
+  {
+    name: 'Martina Elm',
+    born: 1986
+  }
+];
+
+var userList = new List('users', options, values);
+
+userList.add({
+  name: 'Gustaf Lindqvist',
+  born: 1983
+});
+</code></pre>
+  </div>
+</div>
+</div>
+
+
+<div class="startpage-more-examples">
+  <h3>More examples</h3>
+  <ul>
+    
+      <li><a href="/examples/add-get-remove/">Add, get, remove</a></li>
+    
+      <li><a href="/examples/data-attributes-custom-attributes/">Data attributes + custom</a></li>
+    
+      <li><a href="/examples/existing-list-add/">Existing list and add</a></li>
+    
+      <li><a href="/examples/existing-list/">Existing list</a></li>
+    
+      <li><a href="/examples/fuzzy-search/">Fuzzy search</a></li>
+    
+      <li><a href="/examples/new-list/">New list</a></li>
+    
+      <li><a href="/examples/pagination/">Pagination</a></li>
+    
+      <li><a href="/examples/table/">Table</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="startpage-quotes">
+  <div class="startpage-quotes-quote">
+    <blockquote class="twitter-tweet"><p>List.js: native JavaScript that makes your plain HTML lists super flexible, searchable, sortable and filterable - <a href="https://t.co/nOoE1RJg">https://t.co/nOoE1RJg</a></p>&mdash; Smashing Magazine (@smashingmag) <a href="https://twitter.com/smashingmag/statuses/148142949287477248">December 17, 2011</a></blockquote>
+  </div>
+  <div class="startpage-quotes-quote">
+    <blockquote class="twitter-tweet" lang="en"><p>Search, sort, and filter your <a href="https://twitter.com/search?q=%23HTML&amp;src=hash">#HTML</a> tables, lists, and more with List.js <a href="https://t.co/4BHjmOEU56">https://t.co/4BHjmOEU56</a> – dev&#39;d by <a href="https://twitter.com/javve">@javve</a> log&#39;d by <a href="https://twitter.com/jerodsanto">@jerodsanto</a> <a href="https://twitter.com/search?q=%23js&amp;src=hash">#js</a></p>&mdash; The Changelog (@TheChangelog) <a href="https://twitter.com/TheChangelog/statuses/406428113510604800">November 29, 2013</a></blockquote>
+  </div>
+  <div class="startpage-quotes-quote">
+    <blockquote class="twitter-tweet"><p>List.js: Add Search, Sort and Flexibility to HTML Lists or Tables - <a href="https://t.co/ygEp2Tk7Pu">https://t.co/ygEp2Tk7Pu</a> (“Native” JavaScript, no dependencies.)</p>&mdash; JavaScript Daily (@JavaScriptDaily) <a href="https://twitter.com/JavaScriptDaily/statuses/335832684137943040">May 18, 2013</a></blockquote>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="misc-share">
+      <iframe src="https://ghbtns.com/github-btn.html?user=javve&repo=list.js&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95px" height="20px"></iframe>
+      <div class="tweet misc-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-text="List.js - The perfect library for adding search, sort, filters & flexibility to tables, lists, or anything" data-count="horizontal" data-via="javve" data-url="http://listjs.com">Tweet</a></div>
+      <div class="facebook misc-share-button"><div class="fb-like" data-href="http://listjs.com" data-width="80" data-height="20" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div></div>
+      <div class="gplus misc-share-button"><div class="g-plusone" data-size="medium" data-href="http://listjs.com"></div></div>
+    </div>
+  </div>
+
+  <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=listjscom" id="_carbonads_js"></script>
+
+
+  <script src="/assets/javascripts/list.min.js"></script>
+  <script src="/assets/javascripts/main.js"></script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=488461091214550";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Place this tag after the last +1 button tag. -->
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+</body>
+</html>

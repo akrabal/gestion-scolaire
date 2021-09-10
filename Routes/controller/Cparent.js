@@ -7,15 +7,14 @@ exports.ParentGet=async(req,res)=>{
  
        if (req.session.user.role.typeRole=='Parent'){
           chemin=req.baseUrl
-          res.locals.headers=res.locals.headers+req.activ("Parent",chemin) 
-          res.locals.headers=res.locals.headers+req.activ("deconexion",chemin) 
+          res.locals.user= req.session.user
           return  res.render('parents/acceuille');
          }else{
           error={}
           arraymsg=[]
           error.msg="vous n'etes pas autoriser "
           arraymsg.push(error)
-          req.flash('error',arraymsg)
+          req.flash('danger',arraymsg)
           return res.redirect('/connexion')  
        }
        
@@ -24,7 +23,7 @@ exports.ParentGet=async(req,res)=>{
        arraymsg=[]
        error.msg="veillez vous connecter "
        arraymsg.push(error)
-       req.flash('error',arraymsg)
+       req.flash('danger',arraymsg)
        return res.redirect('/connexion')    
     }  
  }
@@ -39,7 +38,7 @@ exports.ParentPost=async(req,res)=>{
     arraymsg=[]
     error.msg="veillez vous connecter "
     arraymsg.push(error)
-    req.flash('error',arraymsg)
+    req.flash('danger',arraymsg)
     return res.redirect('/connexion')    
  }  
 

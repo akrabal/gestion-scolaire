@@ -1,0 +1,97 @@
+<%- include ('../.././include/headerdash')%> 
+<div class="container-fluid">
+
+  <div class="row justify-content-center" >
+    <div class="col-12 col-md-5 col-xl-4 my-5">
+        <h1 class="mb-0 fw-bold text-center">
+            caissier
+           </h1>
+        <form method="POST" action="/directeur/AjoutEconome" >
+
+
+            <div class="form-group">
+
+              <!-- Label -->
+              <label class="form-label">
+                Nom 
+              </label>
+
+              <!-- Input -->
+              <input type="text" class="form-control" name="nom" id="" placeholder="NOM">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <!-- Label -->
+                <label class="form-label">
+                  Prenom
+                </label>
+  
+                <!-- Input -->
+                <input type="text" class="form-control" name="prenom" id=""placeholder="PRENOM">
+  
+            </div>
+            <div class="form-group">
+
+                <!-- Label -->
+                <label class="form-label">
+                  email
+                </label>
+  
+                <!-- Input -->
+                <input type="email" class="form-control" name="email" id=""placeholder="email">
+  
+              </div>
+
+            <div class="form-group">
+
+                <!-- Label -->
+                <label class="form-label">
+                  lieu de naissance
+                </label>
+  
+                <!-- Input -->
+                <input type="text" class="form-control" name="lieunaissance" id="" placeholder="lieu de naissance">
+  
+            </div>
+
+
+            <div class="form-group">
+
+                <!-- Label -->
+                <label class="form-label">
+                  numero de telephone
+                </label>
+  
+                <!-- Input -->
+                <input type="text" class="form-control mb-3" name="numtel" id="" placeholder="(___)___-____" data-inputmask="'mask': '(999)999-9999'">
+  
+            </div>
+
+            <div class="form-group">
+              
+                <div class="btn-group-toggle">
+                    <input type="radio" class="btn-check" name="sexe" value="M" id="option1" autocomplete="off" checked="">
+                    <label class="btn btn-white" for="option1">
+                        <i class="fe fe-check-circle"></i> Masculin
+                    </label>
+                    <input type="radio" class="btn-check" name="sexe" value="F" id="option2" autocomplete="off">
+                    <label class="btn btn-white" for="option2">
+                        <i class="fe fe-check-circle"></i> Feminin
+                      </label>
+                </div>
+            </div>
+
+            
+
+            <!-- Submit -->
+            <button class="btn btn-lg w-100 btn-primary mb-3">
+              Sign up
+            </button>
+
+    </div>
+  </div>        
+</div>
+<%- include ('../.././include/footerdash')%> 

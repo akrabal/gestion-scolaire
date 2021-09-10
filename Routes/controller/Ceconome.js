@@ -9,15 +9,14 @@ const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,co
      
            if (req.session.user.role.typeRole=='econome'){
               chemin=req.baseUrl
-              res.locals.headers=res.locals.headers+req.activ("econome",chemin) 
-              res.locals.headers=res.locals.headers+req.activ("deconexion",chemin) 
+              res.locals.user= req.session.user
               return  res.render('personnelle/econome/acceuille');
              }else{
               error={}
               arraymsg=[]
               error.msg="vous n'etes pas autoriser "
               arraymsg.push(error)
-              req.flash('error',arraymsg)
+              req.flash('danger',arraymsg)
               return res.redirect('/connexion')  
            }
            
@@ -26,7 +25,7 @@ const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,co
            arraymsg=[]
            error.msg="veillez vous connecter "
            arraymsg.push(error)
-           req.flash('error',arraymsg)
+           req.flash('danger',arraymsg)
            return res.redirect('/connexion')    
         }  
      }
@@ -41,7 +40,7 @@ const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,co
            arraymsg=[]
            error.msg="veillez vous connecter "
            arraymsg.push(error)
-           req.flash('error',arraymsg)
+           req.flash('danger',arraymsg)
            return res.redirect('/connexion')    
         }  
      

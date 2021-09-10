@@ -7,8 +7,7 @@ exports.ElevesGet= async(req,res)=>{
  
        if (req.session.user.role.typeRole=='eleves'){
           chemin=req.baseUrl
-          res.locals.headers=res.locals.headers+req.activ("Eleves",chemin) 
-          res.locals.headers=res.locals.headers+req.activ("deconexion",chemin) 
+          res.locals.user= req.session.user
           return  res.render('eleves/acceuille');
 
          }else{
@@ -16,7 +15,7 @@ exports.ElevesGet= async(req,res)=>{
           arraymsg=[]
           error.msg="vous n'etes pas autoriser "
           arraymsg.push(error)
-          req.flash('error',arraymsg)
+          req.flash('danger',arraymsg)
           return res.redirect('/connexion')  
        }
        
@@ -25,7 +24,7 @@ exports.ElevesGet= async(req,res)=>{
        arraymsg=[]
        error.msg="veillez vous connecter "
        arraymsg.push(error)
-       req.flash('error',arraymsg)
+       req.flash('danger',arraymsg)
        return res.redirect('/connexion')    
     }  
  
@@ -44,7 +43,7 @@ exports.ElevesGet= async(req,res)=>{
        arraymsg=[]
        error.msg="veillez vous connecter "
        arraymsg.push(error)
-       req.flash('error',arraymsg)
+       req.flash('danger',arraymsg)
        return res.redirect('/connexion')    
     }  
  }

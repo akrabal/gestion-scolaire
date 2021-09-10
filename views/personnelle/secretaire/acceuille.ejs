@@ -1,128 +1,21 @@
-<%- include ('../.././include/header')%> 
+<%- include ('../.././include/headerdash')%> 
 
-<div class="sidebar"> 
-    <h2 class="big-title">Gestion</h2>
+<div class="container-fluid">
+  <section class="section-border border-primary">
+    <div class="container d-flex flex-column">
+      <div class="row align-items-center justify-content-center gx-0 min-vh-100">
+          <div class="col-8 col-md-6 col-lg-10 offset-md-1 order-md-2 mt-auto mt-md-0 pt-8 pb-4 py-md-11">
 
-   <button class="dropdown-btn">Etudiant</button>  
-   <div class="dropdown-container">
-       <button class="btnmenu" onclick='afficheligne(0)' >ajouter un Etudiant</button>
-        <button class="btnmenu" onclick='afficheligne(1)' >liste des Etudiants</button>       
-   </div>
-    
-     <button class="dropdown-btn">  professeurs</button>  
-     <div class="dropdown-container">
-        <button class="btnmenu" onclick='afficheligne(2)'>ajouter un professeur</button>
-        <button class="btnmenu" onclick='afficheligne(3)'>liste professeur </button>
-  
-    </div>
+            <!-- Image -->
+            <img src="static/landkit/assets/img/illustrations/illustration-2.png" alt="..." class="img-fluid">
 
-    <button class="dropdown-btn"> affaire academique </button>  
-   <div class="dropdown-container"> 
-        <button class="btnmenu" onclick='afficheligne(4)'>ajout de  matiere </button>
-        <button class="btnmenu" onclick='afficheligne(5)'>ajout de cours  </button>
-    </div>
-   
-</div>
-
-<div class="main">
-    <form method="POST" action="/secretaire/AjoutEtudiant"  class="form secre">
-            <caption> Etudiant</caption>
-            <input type="text" name="Nom" id="" placeholder="NOM">
-            <input type="text" name="prenom" id=""placeholder="PRENOM">
-            <input type="email" name="email" id=""placeholder="email">
-            <input type="text" name="naissance" id="" placeholder="lieu de naissance">
-            <input type="number" name="numTel" id="" placeholder="numero de telephone">
-            <div class="sexe">
-                <label for="">Masculin</label>
-                <input type="radio" name="sexe" value="M" id="" >
-                <label for="">Feminin</label>
-                <input type="radio" name="sexe" value="F" id="" >
-            </div>
-            <input type="submit" value="envoyer">
-    </form>
-
-    <form method="POST" action=""  class="form secre">
-      1
-    </form>
-
-    <form method="POST" action="/secretaire/AjoutProfesseur"  class="form secre">
-      <caption>professeur</caption>
-      <input type="text" name="Nom" id="" placeholder="NOM">
-            <input type="text" name="prenom" id=""placeholder="PRENOM">
-            <input type="email" name="email" id=""placeholder="email">
-            <input type="text" name="naissance" id="" placeholder="lieu de naissance">
-            <input type="number" name="numTel" id="" placeholder="numero de telephone">
-            <div class="sexe">
-                <label for="">Masculin</label>
-                <input type="radio" name="sexe" value="M" id="" >
-                <label for="">Feminin</label>
-                <input type="radio" name="sexe" value="F" id="" >
-            </div>
-            <input type="submit" value="envoyer">
-    </form>
-    <form method="POST" action=""  class="form secre">
-    </form>
-
-</form>
-</div>
-     
-    <script>  
-          let dropdown = document.getElementsByClassName("dropdown-btn");
-          let i=0;
-
-           if (dropdown) {
-             for (i = 0; i < dropdown.length; i++) {
-                 dropdown[i].addEventListener("click", function() {
-                   this.classList.toggle("active");
-                   let dropdownContent = this.nextElementSibling;
-                   if (dropdownContent.style.display === "block") {
-                     dropdownContent.style.display = "none";
-                   } else {
-                     dropdownContent.style.display = "block";
-                   }
-                 });
-               }      
-           }
-
-           let btmenu = document.getElementsByClassName("btnmenu");
-           for(i=0;i<btmenu.length;i++)
-           {  
-                 
-                btmenu[i].addEventListener("click",function(){
-                let i
-                btmenu = document.getElementsByClassName("btnmenu");
-                for(i=0;i<btmenu.length;i++)
-                 {
-                  
-                   btmenu[i].classList.remove("activebtmenu")
-                 }
-                console.log(this.classList.item(0))
-                this.classList.toggle("activebtmenu")
-              })
-           }
+          </div>
          
+      </div>
+    </div>
+  </section>
+</div>  
+     
+</div> <!-- / .main-content -->
 
-           function afficheligne(i)
-           {
-             let secre = document.getElementsByClassName("secre")
-            
-             if(secre[i])
-             { 
-               let a =0 
-              for(a;a<secre.length;a++)
-              {
-                 if(secre[a].style.display == "block")
-                 secre[a].style.display = "none";
-              }
-               secre[i].style.display = "block";
-              
-             }else{
-               console.log('ça arrive')
-             }
-            
-
-           };
-   
-       </script>
-
-<%- include ('../.././include/footer')%> 
+<%- include ('../.././include/footerdash')%> 

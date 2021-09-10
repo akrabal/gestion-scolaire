@@ -1,113 +1,17 @@
-<%- include ('.././include/header')%> 
-
-
-<div>
-
-  <!--
-<form class="matierselect" action="">
-    <select  name="matiere" >
-      <option value="">bien</option>
-      <option value="">cool</option>
-    </select>
-    <input type="submit" value="envoyer">
-  </form>
-  -->
-  <% if(locals.classes){ %> 
-  <div class="matiers">
-    <% for( i=0;i < classes.length;i++){ %> 
-        <a class="matiera" href="professeurs/<%= classes[i].id %>"> <button onclick="afficheligne(0)"class="matierselect" > <%= classes[i].niveauclasse %>   </button> </a> 
-        <%}%>   
-      </div>  
-  </div>
-  <% } %> 
-
-  <h1>acceuille</h1>
-
-<table class="tab-affich secre" >
-      <thead>
-          <tr>
-            <!--<th colspan="2">The table header</th> --> 
-             <th>cool</th> 
-             <th>cool</th> 
-             <th>cool</th> 
-             <th>cool</th> 
-             <th>cool</th>
-             <th>cool</th>
-             <th>cool</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-              <td>bien</td>
-          </tr>
-          <tr>
-            <td>cool</td>
-            <td>cool</td>
-            <td>cool</td>
-            <td>cool</td>
-            <td>cool</td>
-            <td>cool</td>
-            <td>cool</td>
-        </tr>
-        <tr>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-          <td>bien</td>
-      </tr>
-      </tbody>
-  </table>
-     
-    <script>  
-          let dropdown = document.getElementsByClassName("dropdown-btn");
-          let i=0;
-
-           if (dropdown) {
-             for (i = 0; i < dropdown.length; i++) {
-                 dropdown[i].addEventListener("click", function() {
-                   this.classList.toggle("active");
-                   let dropdownContent = this.nextElementSibling;
-                   if (dropdownContent.style.display === "block") {
-                     dropdownContent.style.display = "none";
-                   } else {
-                     dropdownContent.style.display = "block";
-                   }
-                 });
-               }      
-           }
-
-           function afficheligne(i)
-           {
-             let secre = document.getElementsByClassName("secre")
-            
-             if(secre[i])
-             { 
-               let a =0 
-              for(a;a<secre.length;a++)
-              {
-                 if(secre[a].style.display == "block")
-                 secre[a].style.display = "none";
-              }
-               secre[i].style.display = "block";
-              
-             }else{
-               console.log('ça arrive')
-             }
-            
-
-           };
-   
-       </script>
-
-<%- include ('.././include/footer')%> 
+<%- include ('.././include/headerdash')%> 
+<div class="container-fluid">
+    <section class="section-border border-primary">
+        <div class="container d-flex flex-column">
+          <div class="row align-items-center justify-content-center gx-0 min-vh-100">
+              <div class="col-8 col-md-15 col-lg-12 offset-md-1 order-md-2 mt-auto mt-md-0 pt-8 pb-4 py-md-11">
+    
+                <!-- Image -->
+                <img src="static/landkit/assets/img/illustrations/prof.png" alt="..." class="img-fluid">
+    
+              </div>
+             
+          </div>
+        </div>
+      </section>
+</div>
+<%- include ('.././include/footerdash')%> 

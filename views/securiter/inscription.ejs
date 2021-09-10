@@ -2,119 +2,96 @@
 
    
 <%- include ('../include/header')%> 
-<h1 class="h1ins">inscription en tant que :</h1>
-               <div class="btpersonelins">
-                   <button onclick="afficheligne(0)" class="btEtudiants btIns"> Etudiants</button>
-                   <button onclick="afficheligne(1)" class="btprof btIns">Professeurs</button>
-                   <button onclick="afficheligne(2)" class="btpar btIns"> Parents</button>
-                   <button onclick="afficheligne(3)" class="btEtab btIns"> directeur </button>
-               </div>
-<div class="main">
-    <form method="POST" action="/inscription/ajoutetuIns"  class="form ins">
-        <caption> Etudiant</caption>
-        <input type="text" name="nom" id="" placeholder="NOM">
-        <input type="text" name="prenom" id=""placeholder="PRENOM">
-        <input type="email" name="email" id=""placeholder="email">
-        <input type="password" name="password" placeholder="mots de passe utilisateur" id="">
-        <input type="text" name="lieunaissance" id="" placeholder="lieu de naissance">
-        <input type="number" name="numtel" id="" placeholder="numero de telephone">
-        <div class="sexe">
-            <label for="">Masculin</label>
-            <input type="radio" name="sexe" value="M" id="" >
-            <label for="">Feminin</label>
-            <input type="radio" name="sexe" value="F" id="" >
-        </div>
-        <input type="submit" value="envoyer">
-    </form>
+  
 
-    <form method="POST" action="/inscription/ajoutprofIns"  class="form ins">
-        <caption>professeur</caption>
-        <input type="text" name="nom" id="" placeholder="NOM">
-              <input type="text" name="prenom" id=""placeholder="PRENOM">
-              <input type="email" name="email" id=""placeholder="email">
-              <input type="password" name="password" placeholder="mots de passe utilisateur" id="">
-              <input type="text" name="lieunaissance" id="" placeholder="lieu de naissance">
-              <input type="number" name="numtel" id="" placeholder="numero de telephone">
-              <div class="sexe">
-                  <label for="">Masculin</label>
-                  <input type="radio" name="sexe" value="M" id="" >
-                  <label for="">Feminin</label>
-                  <input type="radio" name="sexe" value="F" id="" >
-              </div>
-              <input type="submit" value="envoyer">
-      </form>
+   <!-- CONTENT -->
+   <section class="section-border border-primary">
+    <div class="container d-flex flex-column">
+      <div class="row align-items-center justify-content-center gx-0 min-vh-100">
+         <div class="col-12 col-md-5 col-lg-4 order-md-1 mb-auto mb-md-0 pb-8 py-md-11" >
+          <!-- Heading -->
+          <h1 class="mb-0 fw-bold text-center ">
+           inscrire
+          </h1>
 
-      <form method="POST" action="/inscription/ajoutparentIns"  class="form ins">
-        <caption>parent</caption>
-              <input type="text" name="nom" id="" placeholder="NOM">
-              <input type="text" name="prenom" id=""placeholder="PRENOM">
-              <input type="email" name="email" id=""placeholder="email">
-              <input type="password" name="password" placeholder="mots de passe utilisateur" id="">
-              <input type="text" name="lieunaissance" id="" placeholder="lieu de naissance">
-              <input type="number" name="numtel" id="" placeholder="numero de telephone">
-              <div class="sexe">
-                  <label for="">Masculin</label>
-                  <input type="radio" name="sexe" value="M" id="" >
-                  <label for="">Feminin</label>
-                  <input type="radio" name="sexe" value="F" id="" >
-              </div>
-              <input type="submit" value="envoyer">
-      </form>
+          <!-- Form -->
+          <form class="mb-6" method="POST" action="/inscription/ajoutdirecteurIns">
 
-    <form action="/inscription/ajoutdirecteurIns" method="POST" class="form ins">
-            <input type="text" name="nomEatb" id="" placeholder="Nom de votre Etablisement">
-            <input type="text" name="adresseEtab"  placeholder="adresse de l'etablisement"  id="">
-            <input type="number" name="numtelEtab" placeholder="numero de telephone de l'etablisement" id="">
-            <input type="text" name="nom" id="" placeholder="Nom du directeur ">
-            <input type="text" name="prenom" id="" placeholder="Prenom du directeur ">
-            <input type="password" name="password" placeholder="mots de passe utilisateur" id="">
-            <input type="text" name="email" id="" placeholder="email du directeur">
-            <input type="text" name="lieunaissance" id="" placeholder="lieu de naissance du directeur ">
-            <input type="number" name="numtel" placeholder="numero de telephone du directeur" id="">
-            <div class="sexe">
-                <label for="">Masculin</label>
-                <input type="radio" name="sexe" value="M" id="" >
-                <label for="">Feminin</label>
-                <input type="radio" name="sexe" value="F" id="" >
+            <div class="form-group">
+              <label class="form-label" for="email">
+               Nom Etablisement
+              </label>
+              <input type="text" name="nomEatb" class="form-control" id="" placeholder="Nom de votre Etablisement">
+            </div> 
+
+            <div class="form-group">
+              <label class="form-label" for="email">
+                Adresse de l'etablisement
+              </label>
+              <input type="text" class="form-control" name="adresseEtab"  placeholder="adresse de l'etablisement"  id="">
             </div>
-            <input type="submit" value="envoyer">
-    </form>
 
-</div>
+            <div class="form-group">
+              <label class="form-label" for="email">
+                Numero de telephone de l'etablisement
+              </label>
+              <input type="number" name="numtelEtab" class="form-control" placeholder="numero de telephone de l'etablisement" id="">
+            </div>
 
-<script>
-    function afficheligne(i)
-    {
-      let Ins = document.getElementsByClassName("ins")
-      let bt = document.getElementsByClassName("btIns")
-      let h1 = document.getElementsByClassName("h1ins")
-     
-     
-      if(Ins[i])
-      { 
-        let a=0  
-        h1[0].style.display = "none";
-        for(a;a<bt.length;a++)
-        {
-            
-          bt[a].style.display = "none";
-        }
-        
-        a=0
-       for(a;a<Ins.length;a++)
-       {
-          if(Ins[a].style.display == "block")
-          Ins[a].style.display = "none";
-       }
-       Ins[i].style.display = "block";
-       
-      }else{
-        console.log('ça arrive')
-      }
-     
+            <div class="form-group">
+              <label class="form-label" for="email">
+               Nom du directeur
+              </label>
+              <input type="text" class="form-control" name="nom" id="" placeholder="Nom du directeur ">
+            </div>
 
-    };    
-</script>
+            <div class="form-group">
+              <label class="form-label" for="email">
+                Prenom du Directeur
+              </label>
+              <input type="text" class="form-control" name="prenom" id="" placeholder="Prenom du directeur ">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">
+                mots de passe utilisateur
+              </label>
+              <input type="password" class="form-control" name="password" placeholder="mots de passe utilisateur" id="">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">
+                email du directeur
+              </label>
+              <input type="email" class="form-control" name="email" id="" placeholder="email du directeur">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">
+                numero de telephone du directeur
+              </label>
+              <input type="number" class="form-control" name="numtel" placeholder="numero de telephone du directeur" id="">
+            </div>
+
+
+            <!-- Submit -->
+            <button class="btn w-100 btn-primary" type="submit">
+              Sign in
+            </button>
+
+          </form>
+
+         
+
+        </div>
+    
+
+      </div> <!-- / .row -->
+    </div> <!-- / .container -->
+  </section>
+
+
+    
 <%-include('../include/footer') %> 
     
 

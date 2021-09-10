@@ -4,13 +4,23 @@ const bcrypt = require('bcrypt')
 
 exports.connexionGet= async (req, res, next) =>
 {   
-  
-   
-      chemin='/connexion';
-      res.locals.headers=res.locals.headers+req.activ("acceille",chemin) 
-      res.locals.headers=res.locals.headers+req.activ("connexion",chemin) 
-      res.locals.headers=res.locals.headers+req.activ("inscription",chemin)
-      res.render('securiter/connexion');
+  if (!req.verifsession()) 
+  { 
+    chemin='/connexion';
+    res.locals.headers=res.locals.headers+req.activ("acceille",chemin) 
+    res.locals.headers=res.locals.headers+req.activ("connexion",chemin) 
+    res.locals.headers=res.locals.headers+req.activ("inscription",chemin)
+    res.render('securiter/connexion');
+      
+  } else{
+     error={}
+     arraymsg=[]
+     error.msg="vous etes deja connecter "
+     arraymsg.push(error)
+     req.flash('danger',arraymsg)
+     const compt = await CompteUtilisateur.findByPk(res.req.session.user.compt.id)
+     req.findActionForRole(compt)  
+  }  
 }      
    
 exports.connexionPost= async (req, res, next) => { 
@@ -25,7 +35,7 @@ exports.connexionPost= async (req, res, next) => {
       arraymsg=[]
       error.msg=msg
       arraymsg.push(error)
-      req.flash('error',arraymsg)
+      req.flash('danger',arraymsg)
       res.redirect('/connexion') 
    }
 
@@ -39,7 +49,7 @@ exports.connexionPost= async (req, res, next) => {
         let arraymsg=[]
         sucess.msg='conection reussi'
         arraymsg.push(sucess) 
-        req.flash('sucess',arraymsg)
+        req.flash('success',arraymsg)
          if (await req.verifcompte(compt))
          {  
             req.session.user.compt=compt

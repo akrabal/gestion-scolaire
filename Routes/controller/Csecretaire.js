@@ -7,15 +7,14 @@ exports.secretaireGet = async(req,res)=>{
  
        if (req.session.user.role.typeRole=='secretaire'){
           chemin=req.baseUrl
-          res.locals.headers=res.locals.headers+req.activ("secretaire",chemin) 
-          res.locals.headers=res.locals.headers+req.activ("deconexion",chemin) 
+          res.locals.user= req.session.user
           return  res.render('personnelle/secretaire/acceuille');
          }else{
           error={}
           arraymsg=[]
           error.msg="vous n'etes pas autoriser "
           arraymsg.push(error)
-          req.flash('error',arraymsg)
+          req.flash('danger',arraymsg)
           return res.redirect('/connexion')  
        }
        
@@ -24,7 +23,7 @@ exports.secretaireGet = async(req,res)=>{
        arraymsg=[]
        error.msg="veillez vous connecter "
        arraymsg.push(error)
-       req.flash('error',arraymsg)
+       req.flash('danger',arraymsg)
        return res.redirect('/connexion')    
     }  
  }
@@ -41,7 +40,7 @@ exports.secretaireGet = async(req,res)=>{
       arraymsg=[]
       error.msg="veillez vous connecter "
       arraymsg.push(error)
-      req.flash('error',arraymsg)
+      req.flash('danger',arraymsg)
       return res.redirect('/connexion')    
    }  
 

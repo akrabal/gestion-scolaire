@@ -1,0 +1,668 @@
+Uri: https://dashkit.goodthemes.co/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\index.htm
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/assets/favicon/favicon.ico
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\favicon\favicon.ico
+Content Type: image/vnd.microsoft.icon
+
+Uri: https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\mapbox-gl-js\v0.53.0\mapbox-gl.css
+Content Type: text/css
+
+Uri: https://dashkit.goodthemes.co/assets/css/libs.bundle.css
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\css\libs.bundle.css
+Content Type: text/css
+
+Uri: https://dashkit.goodthemes.co/assets/css/theme.bundle.css
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\css\theme.bundle.css
+Content Type: text/css
+
+Uri: https://dashkit.goodthemes.co/assets/css/theme-dark.bundle.css
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\css\theme-dark.bundle.css
+Content Type: text/css
+
+Uri: https://dashkit.goodthemes.co/profile-posts.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\profile-posts.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/project-overview.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\project-overview.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/team-overview.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\team-overview.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/index.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\index.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/account-general.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\account-general.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/sign-in.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\sign-in.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/dashboard-project-management.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\dashboard-project-management.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/dashboard-ecommerce.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\dashboard-ecommerce.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/account-billing.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\account-billing.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/account-members.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\account-members.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/account-security.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\account-security.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/account-notifications.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\account-notifications.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/crm-contacts.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\crm-contacts.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/crm-companies.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\crm-companies.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/crm-deals.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\crm-deals.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/profile-groups.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\profile-groups.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/profile-projects.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\profile-projects.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/profile-files.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\profile-files.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/profile-subscribers.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\profile-subscribers.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/project-files.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\project-files.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/project-reports.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\project-reports.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/project-new.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\project-new.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/team-projects.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\team-projects.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/team-members.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\team-members.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/team-new.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\team-new.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/feed.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\feed.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/social-feed.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\social-feed.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/wizard.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\wizard.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/kanban.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\kanban.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/orders.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\orders.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/invoice.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\invoice.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/pricing.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\pricing.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/widgets.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\widgets.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/sign-in-cover.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\sign-in-cover.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/sign-in-illustration.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\sign-in-illustration.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/sign-up-cover.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\sign-up-cover.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/sign-up-illustration.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\sign-up-illustration.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/sign-up.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\sign-up.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/password-reset-cover.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\password-reset-cover.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/password-reset-illustration.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\password-reset-illustration.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/password-reset.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\password-reset.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/error-illustration.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\error-illustration.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/error.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\error.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/docs/getting-started.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\getting-started.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/docs/design-file.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\design-file.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/docs/components.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\components.html
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/docs/changelog.html
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\changelog.html
+Content Type: text/html
+
+Uri: https://www.googletagmanager.com/gtag/js?id=UA-156446909-1
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\gtag\js.js
+Content Type: application/javascript
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/profiles/avatar-5.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\profiles\avatar-5.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/profiles/avatar-6.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\profiles\avatar-6.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/profiles/avatar-7.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\profiles\avatar-7.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/profiles/avatar-8.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\profiles\avatar-8.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/profiles/avatar-2.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\profiles\avatar-2.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/profiles/avatar-3.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\profiles\avatar-3.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/profiles/avatar-4.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\profiles\avatar-4.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/files/file-1.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\files\file-1.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/profiles/avatar-1.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\profiles\avatar-1.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/illustrations/designer-life.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\illustrations\designer-life.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/teams/team-logo-1.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\teams\team-logo-1.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/teams/team-logo-2.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\teams\team-logo-2.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/projects/project-1.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\projects\project-1.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/projects/project-2.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\projects\project-2.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/projects/project-3.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\projects\project-3.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/logo.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\logo.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/projects/project-5.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\projects\project-5.jpg
+Content Type: image/jpeg
+
+Uri: https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\mapbox-gl-js\v0.53.0\mapbox-gl.js
+Content Type: application/javascript
+
+Uri: https://dashkit.goodthemes.co/assets/js/vendor.bundle.js
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\js\vendor.bundle.js
+Content Type: application/javascript
+
+Uri: https://dashkit.goodthemes.co/assets/js/theme.bundle.js
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\js\theme.bundle.js
+Content Type: application/javascript
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/header-cover.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\header-cover.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-regular.eot
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-regular.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-regular.eot?
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-regular-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-regular.woff
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-regular.woff
+Content Type: font/woff
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-regular.ttf
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-regular.ttf
+Content Type: font/ttf
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-medium.eot
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-medium.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-medium.eot?
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-medium-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-medium.woff
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-medium.woff
+Content Type: font/woff
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-medium.ttf
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-medium.ttf
+Content Type: font/ttf
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-semibold.eot
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-semibold.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-semibold.eot?
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-semibold-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-semibold.woff
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-semibold.woff
+Content Type: font/woff
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/cerebrisans/cerebrisans-semibold.ttf
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\cerebrisans\cerebrisans-semibold.ttf
+Content Type: font/ttf
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/feather/Feather.ttf?sdxovp
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\feather\Feather.ttf
+Content Type: font/ttf
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/feather/Feather.woff?sdxovp
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\feather\Feather.woff
+Content Type: font/woff
+
+Uri: https://dashkit.goodthemes.co/assets/fonts/feather/Feather.svg?sdxovp
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\fonts\feather\Feather.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/sidebar-cover.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\sidebar-cover.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/masks/avatar-status.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\masks\avatar-status.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/masks/avatar-group.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\masks\avatar-group.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/masks/avatar-group-hover.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\masks\avatar-group-hover.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/masks/avatar-group-hover-last.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\masks\avatar-group-hover-last.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/masks/icon-status.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\masks\icon-status.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/profile-cover-1.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\profile-cover-1.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/posts/post-1.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\posts\post-1.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/files/file-2.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\files\file-2.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/files/file-3.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\files\file-3.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/team-cover.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\team-cover.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/products/product-1.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\products\product-1.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/products/product-2.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\products\product-2.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/products/product-3.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\products\product-3.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/products/product-4.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\products\product-4.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/payment-methods/visa.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\payment-methods\visa.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/payment-methods/mastercard.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\payment-methods\mastercard.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/teams/team-logo-3.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\teams\team-logo-3.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/teams/team-logo-4.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\teams\team-logo-4.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/teams/team-logo-5.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\teams\team-logo-5.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/teams/team-logo-6.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\teams\team-logo-6.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/teams/team-logo-7.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\teams\team-logo-7.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/teams/team-logo-8.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\teams\team-logo-8.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/projects/project-4.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\projects\project-4.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/avatars/projects/project-6.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\avatars\projects\project-6.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/files/file-4.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\files\file-4.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/profile-cover-2.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\profile-cover-2.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/profile-cover-3.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\profile-cover-3.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/profile-cover-4.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\profile-cover-4.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/profile-cover-5.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\profile-cover-5.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/profile-cover-6.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\profile-cover-6.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/profile-cover-7.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\profile-cover-7.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/illustrations/scale.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\illustrations\scale.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/illustrations/sticky.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\illustrations\sticky.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/illustrations/happiness.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\illustrations\happiness.svg
+Content Type: image/svg+xml
+
+Uri: https://themes.getbootstrap.com/preview/?theme_id=23273
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\preview\index.htm
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/assets/img/kanban/kanban-2.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\kanban\kanban-2.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/kanban/kanban-1.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\kanban\kanban-1.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/covers/auth-side-cover.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\covers\auth-side-cover.jpg
+Content Type: image/jpeg
+
+Uri: https://dashkit.goodthemes.co/assets/img/illustrations/coworking.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\illustrations\coworking.svg
+Content Type: image/svg+xml
+
+Uri: https://dashkit.goodthemes.co/assets/img/illustrations/lost.svg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\illustrations\lost.svg
+Content Type: image/svg+xml
+
+Uri: https://nodejs.org/en/download/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\en\download\index.htm
+Content Type: text/html
+
+Uri: https://www.npmjs.com/package/handlebars-webpack-plugin
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\package\handlebars-webpack-plugin.html
+Content Type: text/html
+
+Uri: https://www.figma.com/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\index-1.htm
+Content Type: text/html
+
+Uri: https://dashkit.goodthemes.co/assets/img/figma.jpg
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\assets\img\figma.jpg
+Content Type: image/jpeg
+
+Uri: https://getbootstrap.com/docs/5.0/components/alerts/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\5.0\components\alerts\index.htm
+Content Type: text/html
+
+Uri: http://www.jacklmoore.com/autosize/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\autosize\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/4.0/components/badge/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\4.0\components\badge\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/4.0/components/breadcrumb/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\4.0\components\breadcrumb\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/4.0/components/button-group/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\4.0\components\button-group\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/4.0/components/buttons/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\4.0\components\buttons\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/4.0/components/card/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\4.0\components\card\index.htm
+Content Type: text/html
+
+Uri: https://www.chartjs.org/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\index-2.htm
+Content Type: text/html
+
+Uri: https://shopify.github.io/draggable/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\draggable\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/4.0/components/dropdowns/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\4.0\components\dropdowns\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/4.0/components/forms/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\4.0\components\forms\index.htm
+Content Type: text/html
+
+Uri: https://flatpickr.js.org/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\index-3.htm
+Content Type: text/html
+
+Uri: https://github.com/RobinHerbots/Inputmask
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\RobinHerbots\Inputmask.html
+Content Type: text/html
+
+Uri: https://quilljs.com/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\index-4.htm
+Content Type: text/html
+
+Uri: https://feathericons.com/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\index-6.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/5.0/components/list-group/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\5.0\components\list-group\index.htm
+Content Type: text/html
+
+Uri: https://docs.mapbox.com/api/accounts/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\api\accounts\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/5.0/components/modal/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\5.0\components\modal\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/5.0/components/navbar/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\5.0\components\navbar\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/5.0/components/navs/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\5.0\components\navs\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/5.0/components/pagination/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\5.0\components\pagination\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/5.0/components/popovers/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\5.0\components\popovers\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/5.0/components/progress/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\5.0\components\progress\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/4.2/components/spinners/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\4.2\components\spinners\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/4.1/content/tables/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\4.1\content\tables\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/4.2/components/toasts/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\4.2\components\toasts\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/5.0/components/tooltips/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\5.0\components\tooltips\index.htm
+Content Type: text/html
+
+Uri: https://getbootstrap.com/docs/5.0/utilities/borders/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\docs\5.0\utilities\borders\index.htm
+Content Type: text/html
+
+Uri: https://www.dropzonejs.com/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\index-5.htm
+Content Type: text/html
+
+Uri: https://github.com/Choices-js/Choices
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\Choices-js\Choices.html
+Content Type: text/html
+
+Uri: https://listjs.com/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\index-7.htm
+Content Type: text/html
+
+Uri: https://account.mapbox.com/access-tokens/
+File Name: C:\Downloaded Web Sites\dashkit.goodthemes.co\access-tokens\index.htm
+Content Type: text/html
+

@@ -7,7 +7,7 @@ module.exports= function(req,res,next){
   
     req.flash=function(type,content)
     {   
-       if (type=="error"||type=="sucess") {
+       if (type=="danger"||type=="success") {
             if (req.session.flash==undefined) {
                 req.session.flash={}
             }

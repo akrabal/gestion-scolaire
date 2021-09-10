@@ -7,17 +7,16 @@ exports.profGet=async(req,res)=>{
  
        if (req.session.user.role.typeRole=='professeurs'){
           chemin=req.baseUrl
-          res.locals.headers=res.locals.headers+req.activ("professeurs",chemin) 
-          res.locals.headers=res.locals.headers+req.activ("deconexion",chemin) 
           const classe = await classes.findAll()
           res.locals.classes =  classe ;
+          res.locals.user= req.session.user
           return  res.render('professeurs/acceuille');
          }else{
           error={}
           arraymsg=[]
           error.msg="vous n'etes pas autoriser "
           arraymsg.push(error)
-          req.flash('error',arraymsg)
+          req.flash('danger',arraymsg)
           return res.redirect('/connexion')  
        }
        
@@ -26,7 +25,7 @@ exports.profGet=async(req,res)=>{
        arraymsg=[]
        error.msg="veillez vous connecter "
        arraymsg.push(error)
-       req.flash('error',arraymsg)
+       req.flash('danger',arraymsg)
        return res.redirect('/connexion')    
     }  
  }
@@ -42,7 +41,7 @@ exports.profGet=async(req,res)=>{
        arraymsg=[]
        error.msg="veillez vous connecter "
        arraymsg.push(error)
-       req.flash('error',arraymsg)
+       req.flash('danger',arraymsg)
        return res.redirect('/connexion')    
     }  
  }
@@ -54,19 +53,18 @@ exports.ajoutnoteGet= async (req,res)=>{
       if (req.session.user.role.typeRole=='professeurs'){
          id = req.params.id
          chemin=req.baseUrl
-         res.locals.headers=res.locals.headers+req.activ("professeurs",chemin) 
-         res.locals.headers=res.locals.headers+req.activ("deconexion",chemin) 
          const matier = await matiers.findByPk(req.session.user.prof.MatierID)
          res.locals.matiers=matier;
          const classe = await classes.findByPk(id)
          res.locals.eleves = await classe.getEleves()
+         res.locals.user= req.session.user
          return  res.render('professeurs/ajoutnote');
         }else{
          error={}
          arraymsg=[]
          error.msg="vous n'etes pas autoriser "
          arraymsg.push(error)
-         req.flash('error',arraymsg)
+         req.flash('danger',arraymsg)
          return res.redirect('/connexion')  }
       
    } else{
@@ -74,7 +72,7 @@ exports.ajoutnoteGet= async (req,res)=>{
       arraymsg=[]
       error.msg="veillez vous connecter "
       arraymsg.push(error)
-      req.flash('error',arraymsg)
+      req.flash('danger',arraymsg)
       return res.redirect('/connexion')    
    }  
 }

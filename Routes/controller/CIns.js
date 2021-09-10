@@ -3,11 +3,20 @@ const { sequelize, classes, administration , anneescolaire ,CompteUtilisateur,co
 
 
 exports.GetIns= async (req,res) =>{
+   if (!req.verifsession()) 
+   { 
     chemin='/inscription'
-    res.locals.headers=res.locals.headers+req.activ("acceille",chemin) 
-    res.locals.headers=res.locals.headers+req.activ("connexion",chemin)
-    res.locals.headers=res.locals.headers+req.activ("inscription",chemin)
+    res.locals.user= req.session.user
     return  res.render('securiter/inscription');
+   } else{
+      error={}
+      arraymsg=[]
+      error.msg="vous etes deja connecter "
+      arraymsg.push(error)
+      req.flash('danger',arraymsg)
+      const compt = await CompteUtilisateur.findByPk(res.req.session.user.compt.id)
+      req.findActionForRole(compt)  }
+
 }
 
 exports.PostIns = async (req,res) =>{
@@ -21,8 +30,8 @@ exports.ajoutEleveIns = async (req, res) => {
     const error = validationResult(req)
     if (!error.isEmpty()) {
       errors=error.array()
-      req.flash('error',errors) 
-      res.redirect('/inscription')
+      req.flash('danger',errors) 
+      res.redirect('/secretaire')
     }else{
 
        try{
@@ -31,33 +40,33 @@ exports.ajoutEleveIns = async (req, res) => {
           })
 
          const elv = await Eleves.create({NomEleve: req.body.nom ,prenomEleve:req.body.prenom,emailEleve:req.body.email,sexEleve:req.body.sexe,lieunaissEleve: req.body.lieunaissance,telEleve:req.body.numtel })
-         const compt = await CompteUtilisateur.create({NomUtilisateur: elv.NomEleve , passwordUtilisateur: req.body.password, email: elv.emailEleve ,ElevesID: elv.id,roleID: role2.id})
+         const compt = await CompteUtilisateur.create({NomUtilisateur: elv.NomEleve , passwordUtilisateur: 'cool', email: elv.emailEleve ,ElevesID: elv.id,roleID: role2.id})
          arraymsg=[]
          sucess={}
         sucess.msg=' enregistrer'
         arraymsg.push(sucess)
 
-        req.flash('sucess',arraymsg)
+        req.flash('success',arraymsg)
        } catch (error) {
         console.log(error);
          error={}
          arraymsg=[]
          error.msg="votre inscription n'a pas été enregistré veillez contacter l'administrateur"
          arraymsg.push(error)
-         req.flash('error',arraymsg)
+         req.flash('danger',arraymsg)
        }
 
-       res.redirect('/connexion')
+       res.redirect('/secretaire')
     }
 
  }
 
  exports.ajoutProfIns = async (req, res) => {
-
+  
    const error = validationResult(req)
    if (!error.isEmpty()) {
      errors=error.array()
-     req.flash('error',errors) 
+     req.flash('danger',errors) 
      res.redirect('/inscription')
    }else{
 
@@ -74,7 +83,7 @@ exports.ajoutEleveIns = async (req, res) => {
        sucess.msg='enregistrer'
        arraymsg.push(sucess)
 
-       req.flash('sucess',arraymsg)
+       req.flash('success',arraymsg)
        
          
       } catch (error) {
@@ -83,18 +92,18 @@ exports.ajoutEleveIns = async (req, res) => {
          arraymsg=[]
          error.msg=" votre inscription n'a pas été enregistré veillez contacter l'administrateur "
          arraymsg.push(error)
-         req.flash('error',arraymsg)
+         req.flash('danger',arraymsg)
       }
          res.redirect('/connexion')
    }
 }
 
 exports.ajoutParentIns = async (req, res) => {
-
+  
    const error = validationResult(req)
    if (!error.isEmpty()) {
      errors=error.array()
-     req.flash('error',errors) 
+     req.flash('danger',errors) 
      res.redirect('/inscription')
    }else{
 
@@ -110,7 +119,7 @@ exports.ajoutParentIns = async (req, res) => {
           sucess.msg='enregistrer'
           arraymsg.push(sucess)
  
-          req.flash('sucess',arraymsg)
+          req.flash('success',arraymsg)
          
 
       } catch (error) {
@@ -119,7 +128,7 @@ exports.ajoutParentIns = async (req, res) => {
          arraymsg=[]
          error.msg="votre  inscription n'a pas ete enregistrer veillez contacter l'administrateur "
          arraymsg.push(error)
-         req.flash('error',arraymsg)
+         req.flash('danger',arraymsg)
       }
 
       res.redirect('/connexion')
@@ -129,11 +138,12 @@ exports.ajoutParentIns = async (req, res) => {
 
 
    exports.ajoutEtabdirecteurIns = async (req, res) => {
-
+    
+ 
       const error = validationResult(req)
       if (!error.isEmpty()) {
         errors=error.array()
-        req.flash('error',errors) 
+        req.flash('danger',errors) 
         res.redirect('/inscription')
       }else{
    
@@ -151,8 +161,7 @@ exports.ajoutParentIns = async (req, res) => {
                 sucess={}
                sucess.msg=' enregistrer'
                arraymsg.push(sucess)
-      
-               req.flash('sucess',arraymsg)
+               req.flash('success',arraymsg)
               
             
          } catch (error) {
@@ -160,15 +169,16 @@ exports.ajoutParentIns = async (req, res) => {
             arraymsg=[]
             error.msg="Etudiant non enregistre veillez contacter l'administrateur "
             arraymsg.push(error)
-            req.flash('error',arraymsg)
+            req.flash('danger',arraymsg)
          }
         
    
       }
    
+ 
+   }  
    
    
-   }
 
 
 

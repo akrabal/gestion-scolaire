@@ -213,7 +213,7 @@ async function bcryp()
 //avantnote()
 
   
-ajoutclass()
+//ajoutclass()
 
 
 
