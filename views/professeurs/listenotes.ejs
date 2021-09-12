@@ -4,14 +4,11 @@
 <h1 class="mb-0 fw-bold text-center"> NOTE DE <%= Matiere  %> </h1>
    
 <div>
-
-
-
   <div class="card">
     <div class="card-body">
 
       <!-- Table -->
-            <form action="/professeurs/<%= locals. id  %> " method="POST">
+           
               <div class="table-responsive">
                 <table class="table table-sm">
                   <thead>
@@ -22,14 +19,22 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <% if(locals.eleves) {%> 
-                      <% for( i=0;i<eleves.length;i++){ %> 
+                    <% if(locals.notes) {%> 
+                      <% if(locals.notes.length !=0){ %> 
+                          <% for( i=0;i<notes.length;i++){ %> 
+                            <tr>
+                              <th scope="row"><%= i+1 %> </th>
+                              <td><%= eleves[i].NomEleve  %> <%= eleves[i].prenomEleve %> </td>
+                              <td><%=notes[i].valenote  %> </td>
+                            </tr>
+                          <% } %> 
+                      <% }else{ %> 
                         <tr>
-                          <th scope="row"><%= i+1 %> </th>
-                          <td><%= eleves[i].NomEleve%> <%= eleves[i].prenomEleve %> </td>
-                          <td><input type="number" name="note[]" id=""></td>
+                          <th scope="row">1</th>
+                          <td>pas d'etudiants </td>
+                          <td>null</td>
                         </tr>
-                        <% } %> 
+                           <% } %>  
                     <% }else{ %> 
                       <tr>
                         <th scope="row">1</th>
@@ -37,21 +42,9 @@
                         <td>null</td>
                       </tr>
                       <% } %> 
-                      <!-- Submit -->
-                      <tr>
-                        <td>
-                          <button class="btn  btn-primary ">
-                            envoyer
-                          </button>
-                        </td>
-                       
-                      </tr>
                   </tbody>
                 </table>
-              </div>
-            </form>
-
-    
+              </div>    
     </div>
   </div>
 

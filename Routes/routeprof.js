@@ -8,4 +8,6 @@ router.post('/',controlleurs.profPost)
 
 router.get('/:id',controlleurs.ajoutnoteGet)
 router.post('/:id',controlleurs.ajoutnotePost)
+
+router.get('/listeconsulternote/:id',controlleurs.listenote) 
 module.exports= router

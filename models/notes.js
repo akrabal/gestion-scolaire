@@ -30,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
   notes.init({
     valenote: DataTypes.STRING,
     coefnote: DataTypes.STRING,
-    dateajout: DataTypes.STRING
+    dateajout: DataTypes.STRING,
+    typeNote: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'notes',

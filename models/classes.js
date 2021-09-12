@@ -17,7 +17,17 @@ module.exports = (sequelize, DataTypes) => {
         plural:  'Eleves'}})
        models.Eleves.belongsToMany(models.classes,{through: models.ClassEleves,as:{
         singular: "classe",
-        plural:  'classes'} })
+        plural:  'classes'}})
+        
+      //association classe matieres
+
+      models.classes.belongsToMany(models.matiers,{through: models.matiersclasse,as:{
+        singular: "Matier",
+        plural:  'Matiers'}})
+       models.matiers.belongsToMany(models.classes,{through: models.matiersclasse,as:{
+        singular: "classe",
+        plural:  'classes'}})
+
     }
   };
   classes.init({

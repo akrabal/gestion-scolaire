@@ -157,15 +157,30 @@ async  function avantnote()
 
 
 
-async function ajoutclass()
+async function ajoutclasseleve()
 {
     const classe = await classes.findByPk(1)
     const elv = await Eleves.findAll()
 
     for (let i = 0; i < elv.length; i++) {
-        await elv[i].setClasses(classe);  
+        await elv[i].setClasses(classe);
     }
 }
+
+
+
+async function ajoutclassmatiers()
+{
+    const classe = await classes.findAll()
+    const matier = await matiers.findByPk(2)
+ 
+    for (let i = 0; i < classe.length; i++) {
+        await classe[i].setMatiers(matier); 
+    }
+    
+}
+
+
 
 async function bcryp()
 {
@@ -187,7 +202,7 @@ async function bcryp()
   //3
  
    
- // secretaire()
+  //secretaire()
 
    
    
@@ -197,15 +212,14 @@ async function bcryp()
  //4
  
  //parents()
- // prof()
+  //prof()
 
  //5
 
 
-// matier()
-
+ //matier()
 //anne()
-// classe()
+ //classe()
  
 
 
@@ -213,8 +227,8 @@ async function bcryp()
 //avantnote()
 
   
-//ajoutclass()
-
+//ajoutclasseleve()
+//ajoutclassmatiers()
 
 
 

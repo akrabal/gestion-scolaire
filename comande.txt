@@ -48,3 +48,5 @@ npx sequelize-cli model:generate --name etablisements --attributes NomEtab:strin
 //roles 
 npx sequelize-cli model:generate --name roles --attributes typeRole:string,descRoles:string
  
+//classematier
+npx sequelize-cli model:generate --name matiersclasse --attributes cool:string

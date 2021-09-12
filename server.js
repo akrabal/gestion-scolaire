@@ -26,7 +26,7 @@ app.use(session({
   saveUninitialized: true,
   cookie: { secure: false }
 }))
-app.use(/^.{0,20}\/static/,express.static('public'))
+app.use(/^.{0,1000}\/static/,express.static('public'))
 //app.use(/^\/static/,express.static('public'))
 app.use(require('./middleware/flash'))
 app.use(require('./middleware/asset'))

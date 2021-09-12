@@ -28,8 +28,12 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey :{
           name:'MatierID',
           allowNull:true
-        }
-      })  
+        },
+        as :{
+          singular: "Matier",
+          plural:  'Matiers'} 
+      })
+        
       models.professeurs.belongsTo(models.cours,{
         foreignKey :{
           name:'MatierID',

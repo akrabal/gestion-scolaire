@@ -38,8 +38,18 @@ module.exports = (sequelize, DataTypes) => {
       }
     })
      //relation eleves (notes)
-     models.Eleves.belongsToMany(models.notes,{through: models.evaluation})
-     models.notes.belongsToMany(models.Eleves,{through: models.evaluation})
+     models.Eleves.hasMany(models.notes,{
+      foreignKey:{
+        name:'EleveID',
+        allowNull:false
+      }
+    })
+     models.notes.belongsTo(models.Eleves,{
+      foreignKey:{
+        name:'EleveID',
+        allowNull:false
+      }
+    })
     }
   };
   Eleves.init({
