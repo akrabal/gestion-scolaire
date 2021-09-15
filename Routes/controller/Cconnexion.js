@@ -58,7 +58,7 @@ exports.connexionPost= async (req, res, next) => {
             if (compt.ElevesID !== null)
              {
                  try { 
-                       req.session.user.Eleve = await compt.getEleve()
+                       req.session.user.Eleve = await compt.getElefe()
                      } catch (error) {
                        console.log(error);
                        faillconection('votre compte a un probleme veillez contacter l\' administrateur')

@@ -4,6 +4,6 @@ const controlleurs=require('./controller/Celeves')
 
 router.get('/',controlleurs.ElevesGet) 
 
-router.post('/',controlleurs.ElevesPost) 
-
+router.get('/voirnote/:id',controlleurs.voirnote) 
+router.get('/buletin',controlleurs.bulletin) 
 module.exports= router
