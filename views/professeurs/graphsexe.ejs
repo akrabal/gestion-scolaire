@@ -1,0 +1,53 @@
+<%- include ('.././include/headerdash')%> 
+<div class="container-fluid">
+                  <!--
+                  <div class="chart chart-appended">
+                      <canvas class="chart-canvas" id="trafficChart" data-toggle="legend" data-target="#trafficChartLegend"></canvas>
+                    </div>
+                    
+                    <div class="chart-legend" id="trafficChartLegend"></div>
+
+                  -->  
+                  <style>
+                    .chart{
+                      width: 600px;
+                      height: 600px;
+                      margin-left: 20%;
+                     
+                    }
+                  </style>
+
+                  <div class="chart ">
+                            <canvas id="cool" class="chart-canvas" data-toggle="legend" data-target="#coolLegend"></canvas>
+                            
+                  </div>
+                  <div class="chart-legend" id="coolLegend" ></div>
+                  <a class="btn  btn-primary" onclick="window.open('/static/pdf/Prof/repartitionsexe.pdf', '_blank', 'fullscreen=yes'); return false;" href="/static/pdf/Prof/repartitionsexe.pdf" download="repartitionsexe.pdf">Télécharger  état</a>
+                    
+                    <script>
+                      var ctx = document.getElementById('cool').getContext('2d');
+                      
+                      new Chart(ctx, {
+                        type: 'doughnut',
+                        options: {
+                          plugins: {
+                            tooltip: {
+                              callbacks: {
+                                afterLabel: function() {
+                                  return '%'
+                                }
+                              }
+                            }
+                          }
+                        },
+                        data: {
+                          labels: ['Garçon', 'fille'],
+                          datasets: [{
+                            data: [<%= locals.Gar %>,<%= locals.Meuf %> ],
+                            backgroundColor: ['#2C7BE5', '#A6C5F7']
+                          }]
+                        },
+                      });
+                    </script>
+</div>                    
+<%- include ('.././include/footerdash')%> 

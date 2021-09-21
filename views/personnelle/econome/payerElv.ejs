@@ -1,0 +1,73 @@
+<%- include ('../.././include/headerdash')%> 
+<div class="card">
+    <div class="card-header">
+      
+      <h4 class="card-header-title me-auto">
+        <%= etu.NomEleve  %> 
+      </h4>
+      <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+        <%  for ( i = 0; i < type.length; i++) { %>  
+            <li class="nav-item">
+                <a href="#<%= type[i].descfrais  %> " data-bs-toggle="collapse" class="nav-link active"><%= type[i].descfrais  %> </a>
+            </li>
+        <% } %> 
+      </ul>
+    </div>
+    <div class="card-body" >
+        <% cool=0; for ( i = 0; i < type.length; i++) { %>
+            <div class="collapse  " id="<%= type[i].descfrais  %>" class="table-responsive">
+                <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">total payer</th>
+                        <th scope="col">total a payer </th>
+                        <th scope="col"> ajouter patement </th>
+                        <th scope="col" ></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                 <form action="/econome/payementfinal/<%=etu.id  %>/<%= type[i].id  %>" method="POST">
+                    <% if(frais[i].length =!0){ %> 
+                            
+                    <% for(a = 0; a<frais[i].length; a++ ) {  cool = cool + parseInt(frais[i][a].fraisolde);  %>  
+                        
+                        <%  if(a == frais[i].length-1) { %> 
+                             
+                            <tr>
+                                <th scope="row">1 </th>
+                                <td>  <%= cool %> </td>
+                                <td><%= type[i].montantFrais  %>  </td>
+                                <td><input type="number" required="required" name="ecolage" id=""></td>
+                                <td><button type="submit"  class="btn  btn-primary ">payer</button></td>
+                            </tr>
+                        <% } %> 
+    
+                    <% } %>  
+                    <% }else{%>
+                        <tr>
+                            <th scope="row">1 </th>
+                            <td>  0 </td>
+                            <td><%= type[i].montantFrais  %>  </td>
+                            <td><input type="number" name="ecolage" id=""></td>
+                            <td><button type="submit"  class="btn  btn-primary ">payer</button></td>
+                        </tr>
+                    <%} %>   
+                </form>   
+                  
+                    </tbody>
+                    </table>
+                    
+            </div>
+
+    </div> 
+         <%  } %> 
+         
+       
+            
+                 
+               
+            
+  </div>
+
+<%- include ('../.././include/footerdash')%> 

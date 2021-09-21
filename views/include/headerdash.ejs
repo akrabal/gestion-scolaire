@@ -17,7 +17,7 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" href="static/dashkit/assets/css/theme.bundle.css" id="stylesheetLight">
     <link rel="stylesheet" href="static/dashkit/assets/css/theme-dark.bundle.css" id="stylesheetDark">
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <style>body { display: none; }</style>
     
     <!-- Title -->
@@ -1854,10 +1854,29 @@
 
           <% if(locals.user.role.typeRole=='secretaire') {%>
             <ul class="navbar-nav">
+
               <li class="nav-item">
-                <a class="nav-link" href="#sidebarDashboards"  role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                <a class="nav-link" href="/secretaire"  role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                   <i class="fe fe-home"></i> Dashboards
                 </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/secretaire/ajoutprofIns"  role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                  <i class="fe fe-home"></i> Ajouter Professeur 
+                </a>
+              </li>  
+
+              <li class="nav-item">
+                <a class="nav-link" href="/secretaire/ajoutetuIns"  role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                  <i class="fe fe-home"></i> Ajouter Etudiant 
+                </a>
+              </li>  
+              <li class="nav-item"></li>
+                <a class="nav-link" href="/secretaire/ajoutparentIns"  role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                  <i class="fe fe-home"></i> Ajouter Parent 
+                </a>
+              </li>  
                 
               </li>
             </ul>
@@ -1869,6 +1888,49 @@
                 <a class="nav-link" href="#sidebarDashboards"  role="button" aria-expanded="false" aria-controls="sidebarDashboards">
                   <i class="fe fe-home"></i> Dashboards
                 </a>
+                
+              </li> 
+
+              <li class="nav-item">
+                <a class="nav-link" href="#sidebarpayement" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                  <i class="fe fe-home"></i> ajouter un payement 
+                </a>
+                <% if(locals.classes){ %> 
+                  <% for(i=0;i<classes.length;i++) {%> 
+                  <div class="collapse " id="sidebarpayement">
+                    <ul class="nav nav-sm flex-column">
+                      <li class="nav-item">
+                        <a href="/econome/payement/<%=classes[i].id %> " class="nav-link ">
+                          <%=classes[i].niveauclasse %> 
+                        </a>
+                      </li>
+                    </ul>    
+                  </div>
+                  <% } %> 
+              <% } %> 
+              </li>  
+             
+
+              <li class="nav-item">
+                <a class="nav-link" href="#sidebarsolde" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                  <i class="fe fe-home"></i> consulter etat des soldes
+                </a>
+                <% if(locals.classes){ %> 
+                  <% for(i=0;i<classes.length;i++) {%> 
+                  <div class="collapse " id="sidebarsolde">
+                    <ul class="nav nav-sm flex-column">
+                      <li class="nav-item">
+                        <a href="/econome/solde/<%=classes[i].id %> " class="nav-link ">
+                          <%=classes[i].niveauclasse %> 
+                        </a>
+                      </li>
+                    </ul>    
+                  </div>
+                  <% } %> 
+              <% } %> 
+              </li>  
+
+              
                 
               </li>
             </ul>  
@@ -1921,6 +1983,48 @@
                 <% } %> 
                 <% } %> 
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#etatsexe"  data-bs-toggle="collapse" role="button" aria-expanded="false"  aria-controls="sidebarajoutnote">
+                  <i class="fe fe-home"></i> répartion des sexe dans la classe
+                </a>
+                 <% if(locals.classes){ %> 
+                    <% for(i=0;i<classes.length;i++) {%> 
+                    <div class="collapse " id="etatsexe">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="/professeurs/graphsexe/<%=classes[i].id %> " class="nav-link ">
+                            <%=classes[i].niveauclasse %> 
+                          </a>
+                        </li>
+                      </ul>    
+                    </div>
+                    <% } %> 
+                <% } %> 
+ 
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#EtatMoyene"  data-bs-toggle="collapse" role="button" aria-expanded="false"  aria-controls="sidebarajoutnote">
+                  <i class="fe fe-home"></i>  Eleve au dessus de la moyenne
+                </a>
+                 <% if(locals.classes){ %> 
+                    <% for(i=0;i<classes.length;i++) {%> 
+                    <div class="collapse " id="EtatMoyene">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="/professeurs/graphMoyene/<%=classes[i].id %> " class="nav-link ">
+                            <%=classes[i].niveauclasse %> 
+                          </a>
+                        </li>
+                      </ul>    
+                    </div>
+                    <% } %> 
+                <% } %> 
+ 
+              </li>
+
+              
 
             </ul>  
 
@@ -1999,8 +2103,10 @@
     
                 <!-- Toggle -->
                 <a href="" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <div class="avatar avatar-sm avatar-online">
-                    <img src="static/dashkit/assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
+                  <div class="avatar avatar-sm avatar-online ">
+                     <div class="text-primary">
+                      profile
+                     </div>  
                   </div>
                 </a>
     

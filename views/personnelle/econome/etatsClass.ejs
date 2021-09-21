@@ -1,0 +1,50 @@
+<%- include ('../.././include/headerdash')%> 
+<div class="card">
+    <div class="card-header">
+      
+      <h4 class="card-header-title me-auto">
+        <%= classe.niveauclasse  %> 
+      </h4>
+      <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+        <%  for ( i = 0; i < type.length; i++) { %>  
+            <li class="nav-item">
+                <a href="#<%= type[i].descfrais  %> " data-bs-toggle="collapse" class="nav-link active"><%= type[i].descfrais  %> </a>
+            </li>
+        <% } %> 
+      </ul>
+    </div>
+    <div class="card-body" >
+        <% for ( i = 0; i < type.length; i++) { %>
+            <div class="collapse show" id="<%= type[i].descfrais  %>" class="table-responsive">
+                <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Etudiant</th>
+                        <th scope="col">montant versé  </th>
+                        <th scope="col" > a solder </th>
+                        <th scope="col"> montant global a payer  </th>
+                        <th scope="col" ></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     <% for(a=0;a<Eleves.length;a++){ %> 
+                            <tr>
+                                <th scope="row"><%= a+1  %>  </th>
+                                <td> <%= Eleves[a].NomEleve%> <%= Eleves[a].prenomEleve %></td>
+                                <td> <% if(soldePayer[a]){ %>  <%= soldePayer[a]  %> <% }else{%> 0 <%} %>  </td>
+                                <td><% if(soldePayer[a]){ %>  <%= parseInt(type[i].montantFrais)-soldePayer[a]  %> <% }else{%> 0 <%} %> </td>
+                                <td><%= type[i].montantFrais  %></td>
+                                
+                            </tr>
+                     <% } %>        
+                    </tbody>
+                    </table>
+            </div>
+
+    </div> 
+         <%  } %>      
+  </div>
+  <a class="btn  btn-primary"  onclick="window.open('/static/pdf/econome/<%=locals.classe.niveauclasse%>.pdf', '_blank', 'fullscreen=yes'); return false;"  href="/static/pdf/econome/<%=locals.classe.niveauclasse%>.pdf" download="<%= locals.classe.niveauclasse%>.pdf">Télécharger  état</a>
+
+<%- include ('../.././include/footerdash')%> 

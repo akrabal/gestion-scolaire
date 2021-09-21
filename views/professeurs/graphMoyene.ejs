@@ -1,0 +1,40 @@
+<%- include ('.././include/headerdash')%> 
+<div class="container-fluid">
+    <style>
+        .chart{
+          width: 700px;
+          height: 700px;
+          margin-left: 25%;
+         
+        }
+      </style>
+      <div class="chart ">
+                    <canvas  id="bien"  ></canvas>
+      </div>            
+                  <script>
+                    var ctx = document.getElementById('bien').getContext('2d');
+                    new Chart(ctx, {
+                      type: 'doughnut',
+                      options: {
+                        plugins: {
+                          tooltip: {
+                            callbacks: {
+                              afterLabel: function() {
+                                return '%'
+                              }
+                            }
+                          }
+                        }
+                      },
+                      data: {
+                        labels: ['Eleve avec note au dessus de 10', 'Eleve avec notes  en-dessous de 10'],
+                        datasets: [{
+                          data: [<%= locals.boneleve %>, <%= locals.mauvaiselve %> ],
+                          backgroundColor: ['#2C7BE5', '#A6C5F7']
+                        }]
+                      }
+                    });
+                  </script>
+                  <a class="btn  btn-primary"  onclick="window.open('/static/pdf/Prof/Moyenne.pdf', '_blank', 'fullscreen=yes'); return false;"  href="/static/pdf/prof/Moyenne.pdf" download="Moyenne.pdf">Télécharger  état</a>
+</div>
+<%- include ('.././include/footerdash')%> 

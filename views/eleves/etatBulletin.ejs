@@ -1,36 +1,40 @@
-<%- include ('.././include/headerdash')%> 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/dashkit/assets/favicon/favicon.ico" type="image/x-icon">
+    
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="static/dashkit/mapbox-gl-js/v0.53.0/mapbox-gl.css">
+    
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="static/dashkit/assets/css/libs.bundle.css">
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="static/dashkit/assets/css/theme.bundle.css" id="stylesheetLight">
+    <link rel="stylesheet" href="static/dashkit/assets/css/theme-dark.bundle.css" id="stylesheetDark">
+    
+    <style>body { display: none; }</style>
+    
+    <!-- Title -->
+    <title>Dashkit</title>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="static/dashkit/gtag/js.js?id=UA-156446909-1"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-156446909-1");</script>
+  </head>
+  <body>
+  <!-- MAIN CONTENT -->
+  <div class="main-content"> 
+
 <div class="row justify-content-center">
     <div class="col-12 col-lg-10 col-xl-8">
 
       <!-- Header -->
-      <div class="header mt-md-5">
-        <div class="header-body">
-          <div class="row align-items-center">
-            <div class="col">
-
-              <!-- Pretitle -->
-              <h6 class="header-pretitle">
-                Bulletin
-              </h6>
-
-              <!-- Title -->
-              <h1 class="header-title">
-                <%= user.Eleve.NomEleve  %> <%=  user.Eleve.prenomEleve  %> 
-              </h1>
-
-            </div>
-            <div class="col-auto">
-
-              <!-- Buttons -->
-              <a   onclick="window.open('/static/pdf/eleves/<%=user.Eleve.NomEleve%><%=user.Eleve.prenomEleve%>.pdf', '_blank', 'fullscreen=yes'); return false;"href="/static/pdf/eleves/<%=user.Eleve.NomEleve%><%=user.Eleve.prenomEleve%>bulletin.pdf " download="<%=user.Eleve.NomEleve%><%=user.Eleve.prenomEleve%>.pdf" class="btn btn-white lift">
-                Download
-              </a>
-             
-
-            </div>
-          </div> <!-- / .row -->
-        </div>
-      </div>
+     
 
       <!-- Content -->
       <div class="card card-body p-5">
@@ -141,6 +145,4 @@
 
     </div>
   </div>
-
-
-<%- include ('.././include/footerdash')%> 
+  <%- include ('.././include/footerdash')%> 

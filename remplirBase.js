@@ -1,4 +1,4 @@
-const { sequelize, classes, administration , anneeScolaire ,CompteUtilisateur,cours , Eleves, etablisements ,fraisscolaire  , matiers, notes ,Parents,personeladmin,professeurs,roles,typeFrais }=require('./models');
+const { sequelize, classes, administration , anneeScolaire ,CompteUtilisateur,cours , Eleves, etablisements ,fraiscolaire  , matiers, notes ,Parents,personeladmin,professeurs,roles,typefrais }=require('./models');
 const facker = require('faker')
 const bcrypt = require('bcrypt');
 const readline = require('readline');
@@ -75,6 +75,26 @@ async function directeur()
          const directeur = await personeladmin.create({NomPersonel: facker.name.firstName(), prenomPersonel:facker.name.lastName() ,emailPersonel: facker.internet.email(),sexPersonel: 'M' , lieunaissPersonel: facker.address.cityName() , telPersonel: facker.phone.phoneNumberFormat(3), etablisementID: admin.id})
          directeur.setEtablisement(admin)
          const compt = await CompteUtilisateur.create({NomUtilisateur: directeur.NomPersonel , passwordUtilisateur: 'cool', email: directeur.emailPersonel ,personelID: directeur.id,roleID: role2.id})
+
+}
+
+async function ecomome ()
+{
+    const admin=await etablisements.findOne({
+        where:{
+           id:1
+        }
+    })
+    const role2 = await roles.findOne({
+       where:{
+           typeRole:'econome'
+       }
+   })
+    
+    
+    const directeur = await personeladmin.create({NomPersonel: facker.name.firstName(), prenomPersonel:facker.name.lastName() ,emailPersonel: facker.internet.email(),sexPersonel: 'M' , lieunaissPersonel: facker.address.cityName() , telPersonel: facker.phone.phoneNumberFormat(3), etablisementID: admin.id})
+    directeur.setEtablisement(admin)
+    const compt = await CompteUtilisateur.create({NomUtilisateur: directeur.NomPersonel , passwordUtilisateur: 'cool', email: directeur.emailPersonel ,personelID: directeur.id,roleID: role2.id})
 
 }
 
@@ -180,6 +200,17 @@ async function ajoutclassmatiers()
     
 }
 
+async function typeFrais()
+{
+    typefrais.create({descfrais:'ecolage',montantFrais:600000})
+
+}
+
+async function  fraiscolair()
+{
+    fraiscolaire.create({fraisolde:100000,EleveID:1,typefraisID:1 ,annescolaireID:1})
+}
+
 
 
 async function bcryp()
@@ -203,7 +234,7 @@ async function bcryp()
  
    
   //secretaire()
-
+ // ecomome()
    
    
  //eleves()
@@ -230,6 +261,8 @@ async function bcryp()
 //ajoutclasseleve()
 //ajoutclassmatiers()
 
+//typeFrais()
+fraiscolair()
 
 
 

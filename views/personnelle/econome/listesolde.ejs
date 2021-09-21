@@ -1,0 +1,52 @@
+<%- include ('../.././include/headerdash')%> 
+
+      
+
+<h1 class="mb-0 fw-bold text-center"> classe: <%= locals.classe.niveauclasse %> </h1>
+   
+<div>
+
+
+
+  <div class="card">
+    <div class="card-body">
+
+      <!-- Table -->
+          
+              <div class="table-responsive">
+                <table class="table table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">ETUDIANTS</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% if(locals.eleves) {%> 
+                      <% for( i=0;i<eleves.length;i++){ %> 
+                        <tr>
+                          <th scope="row"><%= i+1 %> </th>
+                          <td><%= eleves[i].NomEleve%> <%= eleves[i].prenomEleve %> </td>
+                          <td> <a href="/econome/payementElv/<%= eleves[i].id %> " class="btn  btn-primary ">ajouter payement </a></td>
+                        </tr>
+                        <% } %> 
+                    <% }else{ %> 
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>pas d'etudiants </td>
+                        <td>null</td>
+                      </tr>
+                      <% } %> 
+                  </tbody>
+                </table>
+              </div>
+          
+
+    
+    </div>
+  </div>
+
+
+      
+  <%- include ('../.././include/footerdash')%> 

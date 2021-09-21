@@ -10,4 +10,8 @@ router.get('/:id',controlleurs.ajoutnoteGet)
 router.post('/:id',controlleurs.ajoutnotePost)
 
 router.get('/listeconsulternote/:id',controlleurs.listenote) 
-module.exports= router
+router.get('/etatsexe/:id/:mat',controlleurs.etatsexe)
+router.get('/graphsexe/:id',controlleurs.graphsexe)
+router.get('/etatMoyene/:id/:mat',controlleurs.etatMoyene)
+router.get('/graphMoyene/:id',controlleurs.graphMoyene)
+module.exports= router   

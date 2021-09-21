@@ -1,6 +1,6 @@
 const { validationResult } = require('express-validator');
 const { sequelize, classes, ClassEleves , administration , anneescolaire ,CompteUtilisateur,cours , Eleves, etablisements ,fraisscolaire  , matiers, notes ,Parents,personeladmin,professeurs,roles,typeFrais }=require('../../models');
-const eleves = require('../../models/eleves');
+const puppeteer = require('puppeteer')
 
 exports.profGet=async(req,res)=>{
     if (req.verifsession()) 
@@ -176,5 +176,240 @@ exports.listenote = async (req,res)=>{
    }  
 }
    
+exports.etatsexe = async (req,res)=>{
+  
+         idmath= req.params.mat
+         idclass= req.params.id
+         const eleves = await sequelize.query("select* from eleves e ,classeleves ce where  e.id= ce.ElefeId    and ce.classId= :idclass ",{
+            model: Eleves,
+            replacements: { idclass: idclass}
+         })
+            Gar=0
+            Meuf=0
+         for (let i = 0; i < eleves.length; i++) {
+              if (eleves[i].sexEleve=='M') {
+                 Gar=Gar+1
+              }
+         }
+
+         Gar=Gar*100
+         Gar=Gar/eleves.length
+
+         meuf=100-Gar
+
+         
+
+         const matier = await matiers.findOne({      
+            where:{
+              id: idmath
+                  },
+            })
+      
+         res.locals.classes = await matier.getClasses() ;
+         res.locals.Gar=Gar
+         res.locals.Meuf=Meuf
+         res.locals.eleves= eleves
+         res.locals.user= req.session.user
+         return  res.render('professeurs/etatSexe');
+       
+}
 
 
+exports.graphsexe = async (req,res)=>{
+if (req.verifsession()) 
+{
+   if (req.session.user.role.typeRole=='professeurs'){ 
+ 
+   idclass = req.params.id
+   const eleves = await sequelize.query("select* from eleves e ,classeleves ce where  e.id= ce.ElefeId    and ce.classId= :idclass ",{
+      model: Eleves,
+      replacements: { idclass: idclass}
+   })
+   Gar=0
+   Meuf=0
+for (let i = 0; i < eleves.length; i++) {
+     if (eleves[i].sexEleve=='M') {
+        Gar=Gar+1
+     }
+   
+}
+
+if (Gar!=0) {
+   Gar=Gar*100
+   Gar=Gar/eleves.length
+   Meuf=100-Gar
+}
+
+  
+   console.log(Gar);
+   console.log(Meuf);
+
+
+  const matier = await matiers.findOne({      
+   where:{
+     id:req.session.user.prof.MatierID
+         },
+   })
+
+   
+   res.locals.classes = await matier.getClasses() ;
+   res.locals.Gar=Gar
+   res.locals.Meuf=Meuf
+   res.locals.eleves= eleves
+   res.locals.eleves= eleves
+   res.locals.user= req.session.user
+   const browser = await puppeteer.launch();
+   const page = await browser.newPage();
+   await page.goto('http://localhost:3000/professeurs/etatsexe/'+idclass+'/'+req.session.user.prof.MatierID, {
+     waitUntil: 'networkidle2',
+   });
+    
+   chemin= 'public/pdf/prof/'+'repartitionsexe.pdf'
+   console.log(chemin);
+   await page.pdf({ path:  chemin, format: 'a4' });
+   await browser.close();
+
+   res.render('professeurs/graphSexe')    
+}else{
+   error={}
+   arraymsg=[]
+   error.msg="vous n'etes pas autoriser "
+   arraymsg.push(error)
+   req.flash('danger',arraymsg)
+   return res.redirect('/connexion')  
+}
+
+} else{
+error={}
+arraymsg=[]
+error.msg="veillez vous connecter "
+arraymsg.push(error)
+req.flash('danger',arraymsg)
+return res.redirect('/connexion')    
+}  
+
+
+}
+
+exports.etatMoyene= async (req,res)=>{
+   if (req.verifsession()) 
+   { 
+
+      if (req.session.user.role.typeRole=='professeurs'){
+
+         idmath=req.params.id
+         idclass= req.params.id
+         const classe = await classes.findByPk(idclass)
+         const eleves = await classe.getEleves()
+         const note=[]
+         
+
+         for (let i = 0; i < eleves.length; i++) {
+           
+           note.push ( await sequelize.query("select* from notes n  where  n.EleveID = :eleve and n.MatierID= :Matier ",{
+               model: notes,
+               replacements: { eleve: eleves[i].id , Matier:idmath}
+            }))
+         }
+
+        
+          bonelve=0
+         for (let i = 0; i < note.length; i++) {
+         if (note[i][0].valenote>=10) {
+            bonelve= bonelve+1
+         }
+            
+         }
+        
+         bonelve = bonelve*100
+         bonelve= bonelve/note.length
+         mauvaiselve = 100 - bonelve
+      
+
+         const matier = await matiers.findOne({      
+            where:{
+              id:req.session.user.prof.MatierID
+                  },
+            })
+      
+         res.locals.classes = await matier.getClasses() ;
+         res.locals.boneleve=bonelve
+         res.locals.mauvaiselve=mauvaiselve
+         res.locals.user= req.session.user
+         return  res.render('professeurs/etatMoyene');
+        }else{
+         error={}
+         arraymsg=[]
+         error.msg="vous n'etes pas autoriser "
+         arraymsg.push(error)
+         req.flash('danger',arraymsg)
+         return res.redirect('/connexion')  
+      }
+      
+   } else{
+      error={}
+      arraymsg=[]
+      error.msg="veillez vous connecter "
+      arraymsg.push(error)
+      req.flash('danger',arraymsg)
+      return res.redirect('/connexion')    
+   }
+}
+
+exports.graphMoyene= async (req,res)=>{
+   idclass= req.params.id
+   const classe = await classes.findByPk(idclass)
+   const eleves = await classe.getEleves()
+   const note=[]
+   
+
+   for (let i = 0; i < eleves.length; i++) {
+     
+     note.push ( await sequelize.query("select* from notes n  where  n.EleveID = :eleve and n.MatierID= :Matier ",{
+         model: notes,
+         replacements: { eleve: eleves[i].id , Matier: req.session.user.prof.MatierID}
+      }))
+   }
+
+  
+    bonelve=0
+   for (let i = 0; i < note.length; i++) {
+   if (note[i][0].valenote>=10) {
+      bonelve= bonelve+1
+   }
+      
+   }
+  
+   bonelve = bonelve*100
+   bonelve= bonelve/note.length
+   mauvaiselve = 100 - bonelve
+  
+
+   const matier = await matiers.findOne({      
+      where:{
+        id:req.session.user.prof.MatierID
+            },
+      })
+
+   res.locals.classes = await matier.getClasses() ;
+   res.locals.boneleve=bonelve
+   res.locals.mauvaiselve=mauvaiselve
+   res.locals.user= req.session.user
+   const browser = await puppeteer.launch();
+   const page = await browser.newPage();
+
+   await page.goto('http://localhost:3000/professeurs/graphMoyene/'+idclass+'/'+req.session.user.prof.MatierID, {
+     waitUntil: 'networkidle2',
+   });
+     
+
+   classr = await classes.findByPk(idclass) 
+   
+   nom = classr.niveauclasse
+   chemin= 'public/pdf/prof/'+'Moyenne.pdf'
+  
+   await page.pdf({ path:  chemin, format: 'a4' });
+ 
+   await browser.close();
+   return  res.render('professeurs/graphMoyene');
+}
